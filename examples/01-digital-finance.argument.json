@@ -1,0 +1,371 @@
+{
+  "schema_version": "0.1",
+  "paper": {
+    "title": "Can digital finance boost SME innovation by easing financing constraints?: Evidence from Chinese GEM-listed companies",
+    "authors": "Lianying Yao, Xiaoli Yang",
+    "year": "2022",
+    "url": "https://doi.org/10.1371/journal.pone.0264647",
+    "source_kind": "open_access",
+    "license": "Original article: Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/). Excerpts normalized from publisher XML; Chinese labels and argument links are assistant interpretations."
+  },
+  "analysis": {
+    "language": "zh",
+    "input_scope": "摘要与引言（不含方法、结果及附录正文）",
+    "notice": "本示例由助手根据摘要与引言重建；保留英文原文、中文解读。作者报告的结果及文献定位未经独立核验，样例不构成专家标注基准。",
+    "generator": "Assistant-assisted reconstruction; not expert-validated",
+    "created_at": "2026-10-15"
+  },
+  "passages": [
+    {
+      "id": "P1",
+      "section": "Abstract",
+      "locator": "Abstract, paragraph 1 (publisher XML)",
+      "text": "This paper summarizes the transmission chain of “digital finance-financing constraint-firm innovation” at the theoretical and practical levels, incorporates digital finance into the empirical analysis framework of firm innovation, selects the data of Chinese GEM(Growth Enterprise Market)-listed companies from 2011 to 2020, and matches the data of the digital inclusive finance index. The paper empirically examines the incentive effect and impact mechanism of digital finance on SME innovation through the two-way fixed-effects model and mediated-effects model by matching the data of China GEM-listed companies from 2011 to 2020 with the digital financial inclusion index data. The findings show that the digital development and promotion of digital finance play a significantly positive impact in helping SMEs innovate and stimulate innovation. The effect is realized by alleviating corporate financing constraints. Further, digital finance has different incentive effects on enterprises with varying rights of property nature, as well as on other regions."
+    },
+    {
+      "id": "P2",
+      "section": "I. Introduction",
+      "locator": "I. Introduction, paragraph 1 (publisher XML)",
+      "text": "Chinese small and medium-sized enterprises (SMEs) are generally plagued by difficulties with financing. The root of the problem lies in natural deficiencies of China’s current traditional financial system in serving SMEs or private enterprises [1, 2]. Corporate innovation activities inherently have the attributes of significant upfront capital investment, a long development period, and unpredictable research and design (R&D) results, which often require extensive and stable cash flow support. In contrast, SMEs have difficulties obtaining external financing from traditional financial institutions due to objective reasons such as a lack of historical valid financial data, collateralizable assets, and implicit government guarantees; thus, financing constraints further limit SMEs’ innovation [3, 4]. On the one hand, the prolonged nature of trade friction between China and the US has led to elevated external risks; on the other hand, with the disappearance of the demographic dividend, the transformation of the domestic economy from labor factor-driven to innovation-driven has become increasingly urgent. China has proposed a double-loop strategy under the dual influence of internal and external factors. In the face of the transition from the old to the new economy, how can the original financial system better support the real economy and the innovation economy [5, 6]? Digital finance can effectively leverage emerging digital technologies such as big data to analyze and harness the massive amount of user data accumulated in the underlying layer, effectively breaking through the old operational model of China’s traditional financial system, filling in gaps in the conventional financial market to a certain extent, and widening the channels of financing for SMEs [7–9]. Hence, this paper examines whether and how digital finance can alleviate financing constraints and promote innovation among SMEs."
+    },
+    {
+      "id": "P3",
+      "section": "I. Introduction",
+      "locator": "I. Introduction, paragraph 2 (publisher XML)",
+      "text": "This paper presents an empirical study on the linkages between digital finance, SME innovation, and financing constraints based on the microdata of GEM-listed companies from 2011 to 2020, taking into account the current situation of China’s capital market and social operations, and selecting appropriate financing constraint indicators and related influencing factors. Specifically, the study focuses on the following two questions: First, can digital finance alleviate financing constraints and promote corporate innovation? Second, is the mechanism heterogeneous for firms with different geographic distributions and property rights?"
+    },
+    {
+      "id": "P4",
+      "section": "I. Introduction",
+      "locator": "I. Introduction, paragraph 3 (publisher XML)",
+      "text": "The paper’s theoretical contribution is that research on the impact of financing constraints on corporate innovation is more common in academia. However, exploring the relationship between these three components from the perspective of digital finance is still in its infancy. Therefore, based on the existing literature, this paper introduces the financing constraint as a mediating variable from digital finance to broaden the research perspective on the influencing factors of corporate innovation, and to enrich the literature on digital finance and corporate innovation. The paper’s practical significance is that the Chinese economy is currently in a critical development stage of transitioning from a factor-driven model to an innovation-driven model. To effectively play the role of technological innovation in helping China’s economy to become healthy and high-quality under the “new normal,” and supporting the role of digital financial services in the real economy, it is necessary to clarify the relationship between SME innovation and digital finance development and the influencing mechanism. Second, the paper examines how new digital technologies can be used to empower inclusive finance, reach out to the vast “long tail” group, effectively solve the financing constraints faced by SMEs, and find a new way to build traditional inclusive finance. Finally, regulators offer theoretical support to improve the efficiency of regulatory tools and use the “regulatory sandbox” as an effective means to balance financial innovation and financial stability."
+    },
+    {
+      "id": "P5",
+      "section": "I. Introduction",
+      "locator": "I. Introduction, paragraph 4 (publisher XML)",
+      "text": "This paper explores the differences in the impact of digital finance on the innovation of enterprises with different characteristics from the perspective of the nature of property rights and geographic distribution, and provides empirical evidence for the development of digital finance in China to alleviate the financing constraints of SMEs and promote enterprise innovation."
+    },
+    {
+      "id": "P6",
+      "section": "I. Introduction",
+      "locator": "I. Introduction, paragraph 5 (publisher XML)",
+      "text": "The innovations of this paper are as follows: First, the research horizon is innovative. Most studies have focused on the impact of traditional finance on enterprise innovation, but there is a lack of research on digital finance and the real economy. This paper takes digital finance as an entry point for research and incorporates it into the framework of the analysis of factors influencing SME innovation, thus enriching the study of SME innovation at the macro level and shedding light on how the growth of financial markets can help promote enterprise innovation. As China’s economy is now at a critical stage in its transition from a factor-driven to an innovation-driven growth model, it is essential to clarify the relationship between SME innovation and the development of digital finance and the mechanisms that influence it. The aim is to effectively leverage technological innovation to support the healthy, high-quality expansion of China’s economy under the “new normal” and to facilitate the role of digital financial services in the real economy."
+    },
+    {
+      "id": "P7",
+      "section": "I. Introduction",
+      "locator": "I. Introduction, paragraph 6 (publisher XML)",
+      "text": "In terms of theoretical innovation, previous studies on digital finance’s impact on enterprise innovation are primarily direct, and the indirect effect between the two is still in the exploration stage. This paper will clarify the transmission mechanism of “digital finance—financing constraints—enterprise innovation” and how digital finance can alleviate financing constraints and stimulate enterprise innovation. There are many studies on the impact of financing constraints on corporate innovation."
+    },
+    {
+      "id": "P8",
+      "section": "I. Introduction",
+      "locator": "I. Introduction, paragraph 7 (publisher XML)",
+      "text": "Regarding data innovation, the availability of quantitative indicators limits the existing literature on digital finance, and the data sample is limited to the period from 2011 to 2015. Nevertheless, with the release of the second Digital Finance Index, the period of this paper can be extended to 2020, which expands existing research."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "N1",
+      "role": "problem",
+      "label": "中小企业创新需要稳定资金，但获取外部融资困难。",
+      "status": "explicit",
+      "core": true,
+      "basis": [
+        {
+          "passage_id": "P2",
+          "quote": "Corporate innovation activities inherently have the attributes of significant upfront capital investment, a long development period, and unpredictable research and design (R&D) results, which often require extensive and stable cash flow support."
+        },
+        {
+          "passage_id": "P2",
+          "quote": "SMEs have difficulties obtaining external financing from traditional financial institutions"
+        }
+      ],
+      "rationale": "",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N2",
+      "role": "prior",
+      "label": "作者回顾：数字金融可能拓宽中小企业融资渠道。",
+      "status": "explicit",
+      "core": true,
+      "basis": [
+        {
+          "passage_id": "P2",
+          "quote": "filling in gaps in the conventional financial market to a certain extent, and widening the channels of financing for SMEs"
+        }
+      ],
+      "rationale": "",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N3",
+      "role": "gap",
+      "label": "作者认为：数字金融经融资约束影响创新的间接路径仍待探索。",
+      "status": "explicit",
+      "core": true,
+      "basis": [
+        {
+          "passage_id": "P7",
+          "quote": "the indirect effect between the two is still in the exploration stage."
+        }
+      ],
+      "rationale": "",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N4",
+      "role": "question",
+      "label": "数字金融能否缓解融资约束并促进企业创新？",
+      "status": "explicit",
+      "core": true,
+      "basis": [
+        {
+          "passage_id": "P3",
+          "quote": "First, can digital finance alleviate financing constraints and promote corporate innovation?"
+        }
+      ],
+      "rationale": "",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N5",
+      "role": "method",
+      "label": "匹配 2011—2020 年创业板数据与数字普惠金融指数，使用固定效应与中介模型。",
+      "status": "explicit",
+      "core": true,
+      "basis": [
+        {
+          "passage_id": "P1",
+          "quote": "The paper empirically examines the incentive effect and impact mechanism of digital finance on SME innovation through the two-way fixed-effects model and mediated-effects model by matching the data of China GEM-listed companies from 2011 to 2020 with the digital financial inclusion index data."
+        }
+      ],
+      "rationale": "",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N6",
+      "role": "finding",
+      "label": "摘要报告：数字金融促进创新，作者将其解释为融资约束缓解。",
+      "status": "explicit",
+      "core": true,
+      "basis": [
+        {
+          "passage_id": "P1",
+          "quote": "The findings show that the digital development and promotion of digital finance play a significantly positive impact in helping SMEs innovate and stimulate innovation. The effect is realized by alleviating corporate financing constraints."
+        }
+      ],
+      "rationale": "",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N7",
+      "role": "contribution",
+      "label": "贡献主张：把融资约束作为中介，引入数字金融与创新研究。",
+      "status": "explicit",
+      "core": true,
+      "basis": [
+        {
+          "passage_id": "P4",
+          "quote": "this paper introduces the financing constraint as a mediating variable from digital finance to broaden the research perspective on the influencing factors of corporate innovation, and to enrich the literature on digital finance and corporate innovation."
+        }
+      ],
+      "rationale": "",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N8",
+      "role": "finding",
+      "label": "作者还报告：不同产权性质与地区的企业存在异质性。",
+      "status": "explicit",
+      "core": true,
+      "basis": [
+        {
+          "passage_id": "P1",
+          "quote": "Further, digital finance has different incentive effects on enterprises with varying rights of property nature, as well as on other regions."
+        }
+      ],
+      "rationale": "",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N9",
+      "role": "limitation",
+      "label": "待核对：这些模型如何排除共同变化和反向因果？",
+      "status": "not_in_input",
+      "core": false,
+      "basis": [],
+      "rationale": "所读摘要与引言说明模型类型，但没有展开识别条件；需要查阅方法、稳健性检验与附录。不能据此断言全文未处理内生性。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N10",
+      "role": "assumption",
+      "label": "若作因果解释，需要额外识别依据；固定效应或中介模型名称本身不足以保证。",
+      "status": "inferred",
+      "core": false,
+      "basis": [
+        {
+          "passage_id": "P1",
+          "quote": "two-way fixed-effects model and mediated-effects model"
+        }
+      ],
+      "rationale": "这是读者针对模型类型提出的识别要求，不是作者在这段文字中明确陈述的假设。",
+      "review": "unreviewed",
+      "note": ""
+    }
+  ],
+  "edges": [
+    {
+      "id": "E1",
+      "source": "N1",
+      "target": "N4",
+      "relation": "motivates",
+      "status": "inferred",
+      "basis": [
+        {
+          "passage_id": "P2",
+          "quote": "Hence, this paper examines whether and how digital finance can alleviate financing constraints and promote innovation among SMEs."
+        }
+      ],
+      "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "E2",
+      "source": "N2",
+      "target": "N4",
+      "relation": "motivates",
+      "status": "inferred",
+      "basis": [
+        {
+          "passage_id": "P2",
+          "quote": "widening the channels of financing for SMEs"
+        }
+      ],
+      "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "E3",
+      "source": "N3",
+      "target": "N4",
+      "relation": "motivates",
+      "status": "inferred",
+      "basis": [
+        {
+          "passage_id": "P7",
+          "quote": "the indirect effect between the two is still in the exploration stage."
+        }
+      ],
+      "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "E4",
+      "source": "N4",
+      "target": "N5",
+      "relation": "motivates",
+      "status": "inferred",
+      "basis": [
+        {
+          "passage_id": "P3",
+          "quote": "This paper presents an empirical study on the linkages between digital finance, SME innovation, and financing constraints"
+        }
+      ],
+      "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "E5",
+      "source": "N5",
+      "target": "N6",
+      "relation": "reports",
+      "status": "explicit",
+      "basis": [
+        {
+          "passage_id": "P1",
+          "quote": "The findings show that the digital development and promotion of digital finance play a significantly positive impact in helping SMEs innovate and stimulate innovation."
+        }
+      ],
+      "rationale": "摘要报告研究结果；此关系不表示读者已经核验估计或识别。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "E6",
+      "source": "N6",
+      "target": "N7",
+      "relation": "supports",
+      "status": "inferred",
+      "basis": [
+        {
+          "passage_id": "P4",
+          "quote": "this paper introduces the financing constraint as a mediating variable from digital finance"
+        }
+      ],
+      "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "E7",
+      "source": "N5",
+      "target": "N8",
+      "relation": "reports",
+      "status": "explicit",
+      "basis": [
+        {
+          "passage_id": "P1",
+          "quote": "Further, digital finance has different incentive effects on enterprises with varying rights of property nature, as well as on other regions."
+        }
+      ],
+      "rationale": "摘要报告异质性发现。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "E8",
+      "source": "N9",
+      "target": "N6",
+      "relation": "qualifies",
+      "status": "not_in_input",
+      "basis": [],
+      "rationale": "当前输入尚不能核验作者对结果的因果解释；这不是对全文识别有效性的结论。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "E9",
+      "source": "N10",
+      "target": "N6",
+      "relation": "qualifies",
+      "status": "inferred",
+      "basis": [
+        {
+          "passage_id": "P1",
+          "quote": "two-way fixed-effects model and mediated-effects model"
+        }
+      ],
+      "rationale": "读者提出的识别边界，限定如何解释作者报告的结果。",
+      "review": "unreviewed",
+      "note": ""
+    }
+  ],
+  "revisions": []
+}

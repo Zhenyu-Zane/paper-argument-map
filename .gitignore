@@ -1,0 +1,9 @@
+work/
+outputs/
+__pycache__/
+*.py[cod]
+.venv/
+.env
+node_modules/
+test-results/
+.DS_Store

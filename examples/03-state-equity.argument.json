@@ -1,0 +1,369 @@
+{
+  "schema_version": "0.1",
+  "paper": {
+    "title": "State equity participation and financing constraints of private enterprises in China: Based on the competitive pressure perspective",
+    "authors": "Qian Xiao",
+    "year": "2023",
+    "url": "https://doi.org/10.1371/journal.pone.0292817",
+    "source_kind": "open_access",
+    "license": "Original article: Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/). Excerpts normalized from publisher XML; Chinese labels and argument links are assistant interpretations."
+  },
+  "analysis": {
+    "language": "zh",
+    "input_scope": "摘要与引言（不含方法、结果及附录正文）",
+    "notice": "本示例由助手根据摘要与引言重建；保留英文原文、中文解读。作者报告的结果及文献定位未经独立核验，样例不构成专家标注基准。",
+    "generator": "Assistant-assisted reconstruction; not expert-validated",
+    "created_at": "2026-10-15"
+  },
+  "passages": [
+    {
+      "id": "P1",
+      "section": "Abstract",
+      "locator": "Abstract, paragraph 1 (publisher XML)",
+      "text": "This study examines the impact of state participation on the alleviation of financing constraints faced by private Chinese enterprises. The analysis is based on data collected from a sample of 2,256 private Chinese enterprises surveyed by the World Bank in 2011 and 2013, and a sample of 3,197 listed enterprises in China from 2009 to 2020. The empirical findings demonstrate that (1) State equity participation can effectively alleviate the financial constraints faced by enterprises, and its approach is to alleviate financing constraints by lessening the competitive pressure on mixed-equity enterprises. (2) Anxiety related to survival and development that arises from competitive pressures compels private enterprises to seek competitive advantages through new investments. Consequently, private enterprises’ demand for external capital has increased. However, the conversion of capital requirements into external financing applications has become increasingly challenging due to deficiencies in enterprises’ internal cognitive processes regarding financial information. (3) Heterogeneity analysis reveals that state equity participation has a more pronounced impact on alleviating the financing constraints faced by emerging, non-group, and non-listed enterprises."
+    },
+    {
+      "id": "P2",
+      "section": "1. Introduction",
+      "locator": "1. Introduction, paragraph 1 (publisher XML)",
+      "text": "In recent decades, the rapid development of China’s economy has been supported by the important contributions of private enterprises in promoting employment, technological innovation, and financial tax revenue [1]. In most global economies, there has been a gradual improvement in both the macro policy environment and business conditions. This has resulted in more opportunities for private enterprises to enhance their quality of development [2]. However, private enterprises still face significant challenges in accessing affordable financing, which is a major obstacle to their growth and development [3]. Since 2020, the COVID-19 pandemic has decelerated China’s economic growth and increased financing challenges for private enterprises [4]. Previous studies have demonstrated that the presence of financial constraints adversely affects the digital transformation and green innovation capacities of private enterprises while concurrently amplifying their carbon dioxide emission and energy intensities [5–8]. Hence, the effective alleviation of financial constraints for private enterprises has emerged as a crucial concern for ensuring the high-quality advancement of the private sector."
+    },
+    {
+      "id": "P3",
+      "section": "1. Introduction",
+      "locator": "1. Introduction, paragraph 2 (publisher XML)",
+      "text": "In 2015, the State Council of China proposed promoting state-owned capital to acquire equity holdings in non-state-owned enterprises through various means. Consequently, state-owned capital is increasingly engaging in private enterprises through equity participation. State participation in private enterprises is prevalent in economies where public ownership is predominant. Among the various types of intervention, direct state equity participation in private enterprises has a more extensive influence on their overall growth. The government not only impacts the growth plan and benefit-sharing of private enterprises based on equity but also offers enterprises unique political relations and internal and external resources. The question of whether the participation of state equity in private enterprises for the purpose of implementing hybrid ownership reforms has a positive impact on the long-term growth of these enterprises has garnered significant attention in recent years [9,10]. Competitive pressure on enterprises causes survival and development concerns caused by an increasingly competitive marketplace. When enterprises face intense competitive pressure, they strive to acquire a unique competitive edge through new investments, such as research and development (R&D) or the introduction of innovative technologies. Consequently, the heightened competitive pressure in the external market amplifies an enterprise’s requirement for external financial resources."
+    },
+    {
+      "id": "P4",
+      "section": "1. Introduction",
+      "locator": "1. Introduction, paragraph 3 (publisher XML)",
+      "text": "Investigating the constraints faced by enterprises in obtaining funding initially emerged from the Modigliani (MM) hypothesis in the 1950s. After extensive theoretical expansion and development, Fazzari et al. established a widely acknowledged definition of financing constraints [11]. These constraints arise from the imperfect nature of the capital market, resulting in the absence of a perfect substitution relationship between internal and external financing for enterprises. Consequently, external financing incurs a financing premium, prompting enterprises to rely heavily on internal funds for investments. This dynamic gives rise to financing constraints experienced by enterprises. Some scholars claim that the underlying reason for constraints in enterprise financing may be the response of enterprise finance to fluctuations in the macroeconomic landscape or alterations in macroeconomic policy. Illustrative examples include economic operating circumstances [12,13], monetary policy [14], banks’ market power [15], and financial technology [16]. There is a body of research indicating that corporate funding limits may be attributed to businesses’ specific factor endowments. For instance, Almeida and Campello reveal that enterprises possessing greater tangible assets may have enhanced access to external financing [17]. Private- and foreign-owned enterprises are more susceptible to financial limitations than state-owned and collective enterprises [18]. Moreover, it should be noted that smaller non-state enterprises are particularly susceptible to customer concentration. This concentration of consumers results in amplified bargaining power for downstream customers during supplier-customer interactions. Consequently, this dynamic exacerbates the financial restrictions faced by upstream organizations [19]."
+    },
+    {
+      "id": "P5",
+      "section": "1. Introduction",
+      "locator": "1. Introduction, paragraph 4 (publisher XML)",
+      "text": "Combining the above literature, it can be seen that most studies on the factors affecting the financing constraints of private enterprises focus on the external policy and financial environments of enterprises. Although there are some studies on the internal nature of enterprises, their theories need to be further improved. Financing constraints have always been a key topic of researchers’ attention, but there are still some shortcomings to be addressed: (1) Influenced by the availability of data, most studies have focused on the data of listed enterprises, or the raw data obtained from research in specific regions, and studies on national unlisted enterprises still need to be supplemented. (2) Some studies consider enterprise competition as an important factor affecting financing constraints, but the theory of its functioning mechanism has not yet been fully formed and still needs to be further improved. (3) The impact of state participation on the external financing constraints of private enterprises is not yet conclusive, and few studies have focused on the political affiliation and competitive dynamics of private enterprises. Therefore, studying the impact of state participation and private enterprises’ internal competitive pressure on their financing constraints both answers whether private enterprises can take the initiative in the capital market and is a useful suggestion for government departments and financial institutions to effectively help private enterprises in financing."
+    },
+    {
+      "id": "P6",
+      "section": "1. Introduction",
+      "locator": "1. Introduction, paragraph 5 (publisher XML)",
+      "text": "The contributions of this paper are as follows: (1) Taking private enterprises as the research object, we explore the impact of state-owned capital participation on corporate financing constraints from the perspective of state-owned capital participation, enriching the relevant literature on the impact of state-owned participation on the financing constraints of private enterprises. (2) We explore the mechanism of how competitive pressure derived from market competition behavior impact the financing constraints of private enterprises and explore whether state-owned equity participation in private enterprises can alleviate internal competitive pressure and financing constraints. (3) By adding data on small- and medium-sized private enterprises, we verify whether the effect of state-owned equity participation on private enterprises’ external financing constraints is universal."
+    },
+    {
+      "id": "P7",
+      "section": "1. Introduction",
+      "locator": "1. Introduction, paragraph 6 (publisher XML)",
+      "text": "The rest of the paper is structured as follows: the second section presents the theoretical analysis and research hypotheses; the third section describes the data sources and variable selection; the fourth and fifth sections present the empirical analyses, including the results of the benchmark regressions, mechanism analyses, heterogeneity analyses, and robustness tests; the sixth section presents the discussion; and the seventh section presents the conclusions and policy recommendations."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "N1",
+      "role": "problem",
+      "label": "民营企业仍面临融资难题，影响发展与创新。",
+      "status": "explicit",
+      "core": true,
+      "basis": [
+        {
+          "passage_id": "P2",
+          "quote": "private enterprises still face significant challenges in accessing affordable financing, which is a major obstacle to their growth and development"
+        }
+      ],
+      "rationale": "",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N2",
+      "role": "prior",
+      "label": "作者提出：竞争压力会提高企业投资与外部融资需求。",
+      "status": "explicit",
+      "core": true,
+      "basis": [
+        {
+          "passage_id": "P3",
+          "quote": "the heightened competitive pressure in the external market amplifies an enterprise’s requirement for external financial resources."
+        }
+      ],
+      "rationale": "",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N3",
+      "role": "gap",
+      "label": "作者归纳缺口：非上市企业、竞争机制与国资参与效应仍待补充。",
+      "status": "explicit",
+      "core": true,
+      "basis": [
+        {
+          "passage_id": "P5",
+          "quote": "studies on national unlisted enterprises still need to be supplemented."
+        },
+        {
+          "passage_id": "P5",
+          "quote": "the theory of its functioning mechanism has not yet been fully formed and still needs to be further improved."
+        },
+        {
+          "passage_id": "P5",
+          "quote": "The impact of state participation on the external financing constraints of private enterprises is not yet conclusive"
+        }
+      ],
+      "rationale": "",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N4",
+      "role": "question",
+      "label": "国资参股能否缓解民企融资约束，竞争压力在其中起什么作用？",
+      "status": "explicit",
+      "core": true,
+      "basis": [
+        {
+          "passage_id": "P6",
+          "quote": "explore whether state-owned equity participation in private enterprises can alleviate internal competitive pressure and financing constraints."
+        }
+      ],
+      "rationale": "",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N5",
+      "role": "method",
+      "label": "结合世界银行民企调查与 2009—2020 年上市企业样本。",
+      "status": "explicit",
+      "core": true,
+      "basis": [
+        {
+          "passage_id": "P1",
+          "quote": "The analysis is based on data collected from a sample of 2,256 private Chinese enterprises surveyed by the World Bank in 2011 and 2013, and a sample of 3,197 listed enterprises in China from 2009 to 2020."
+        }
+      ],
+      "rationale": "",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N6",
+      "role": "finding",
+      "label": "摘要报告：国资参与缓解融资约束，作者归因于竞争压力减轻。",
+      "status": "explicit",
+      "core": true,
+      "basis": [
+        {
+          "passage_id": "P1",
+          "quote": "State equity participation can effectively alleviate the financial constraints faced by enterprises, and its approach is to alleviate financing constraints by lessening the competitive pressure on mixed-equity enterprises."
+        }
+      ],
+      "rationale": "",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N7",
+      "role": "contribution",
+      "label": "贡献主张：引入竞争压力机制，并补充中小民营企业证据。",
+      "status": "explicit",
+      "core": true,
+      "basis": [
+        {
+          "passage_id": "P6",
+          "quote": "By adding data on small- and medium-sized private enterprises, we verify whether the effect of state-owned equity participation on private enterprises’ external financing constraints is universal."
+        }
+      ],
+      "rationale": "",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N8",
+      "role": "finding",
+      "label": "作者报告：新兴、非集团和非上市企业的缓解效应更明显。",
+      "status": "explicit",
+      "core": true,
+      "basis": [
+        {
+          "passage_id": "P1",
+          "quote": "Heterogeneity analysis reveals that state equity participation has a more pronounced impact on alleviating the financing constraints faced by emerging, non-group, and non-listed enterprises."
+        }
+      ],
+      "rationale": "",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N9",
+      "role": "limitation",
+      "label": "待核对：国资进入企业的选择机制如何影响结果解释？",
+      "status": "not_in_input",
+      "core": false,
+      "basis": [],
+      "rationale": "所读摘要与引言没有充分说明用于处理国资进入选择性的识别设计；需要进一步阅读方法与稳健性部分。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N10",
+      "role": "limitation",
+      "label": "“检验普遍性”是研究目标，不能据此认定所有企业都同等受益。",
+      "status": "inferred",
+      "core": false,
+      "basis": [
+        {
+          "passage_id": "P6",
+          "quote": "we verify whether the effect of state-owned equity participation on private enterprises’ external financing constraints is universal."
+        }
+      ],
+      "rationale": "保留 whether 的疑问性质，并与作者报告的异质性相区分。",
+      "review": "unreviewed",
+      "note": ""
+    }
+  ],
+  "edges": [
+    {
+      "id": "E1",
+      "source": "N1",
+      "target": "N4",
+      "relation": "motivates",
+      "status": "inferred",
+      "basis": [
+        {
+          "passage_id": "P2",
+          "quote": "the effective alleviation of financial constraints for private enterprises has emerged as a crucial concern"
+        }
+      ],
+      "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "E2",
+      "source": "N2",
+      "target": "N4",
+      "relation": "motivates",
+      "status": "inferred",
+      "basis": [
+        {
+          "passage_id": "P3",
+          "quote": "the heightened competitive pressure in the external market amplifies an enterprise’s requirement for external financial resources."
+        }
+      ],
+      "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "E3",
+      "source": "N3",
+      "target": "N4",
+      "relation": "motivates",
+      "status": "inferred",
+      "basis": [
+        {
+          "passage_id": "P5",
+          "quote": "The impact of state participation on the external financing constraints of private enterprises is not yet conclusive"
+        }
+      ],
+      "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "E4",
+      "source": "N4",
+      "target": "N5",
+      "relation": "motivates",
+      "status": "inferred",
+      "basis": [
+        {
+          "passage_id": "P1",
+          "quote": "This study examines the impact of state participation on the alleviation of financing constraints faced by private Chinese enterprises."
+        }
+      ],
+      "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "E5",
+      "source": "N5",
+      "target": "N6",
+      "relation": "reports",
+      "status": "explicit",
+      "basis": [
+        {
+          "passage_id": "P1",
+          "quote": "State equity participation can effectively alleviate the financial constraints faced by enterprises"
+        }
+      ],
+      "rationale": "摘要对研究结果的报告，不是对原始数据的复核。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "E6",
+      "source": "N5",
+      "target": "N8",
+      "relation": "reports",
+      "status": "explicit",
+      "basis": [
+        {
+          "passage_id": "P1",
+          "quote": "Heterogeneity analysis reveals that state equity participation has a more pronounced impact"
+        }
+      ],
+      "rationale": "作者在摘要中报告异质性。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "E7",
+      "source": "N6",
+      "target": "N7",
+      "relation": "supports",
+      "status": "inferred",
+      "basis": [
+        {
+          "passage_id": "P6",
+          "quote": "We explore the mechanism of how competitive pressure derived from market competition behavior impact the financing constraints of private enterprises"
+        }
+      ],
+      "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "E8",
+      "source": "N9",
+      "target": "N6",
+      "relation": "qualifies",
+      "status": "not_in_input",
+      "basis": [],
+      "rationale": "当前输入未展开识别设计，不能据摘要措辞判断因果识别是否成立。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "E9",
+      "source": "N10",
+      "target": "N7",
+      "relation": "qualifies",
+      "status": "inferred",
+      "basis": [
+        {
+          "passage_id": "P6",
+          "quote": "we verify whether the effect"
+        }
+      ],
+      "rationale": "区别检验目标与已建立的普遍性结论。",
+      "review": "unreviewed",
+      "note": ""
+    }
+  ],
+  "revisions": []
+}

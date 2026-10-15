@@ -1,0 +1,361 @@
+{
+  "schema_version": "0.1",
+  "paper": {
+    "title": "Financial constraints, government subsidies, and corporate innovation",
+    "authors": "Qi Li, Jiaojiao Wang, Guohua Cao, Jing Zhang",
+    "year": "2021",
+    "url": "https://doi.org/10.1371/journal.pone.0259642",
+    "source_kind": "open_access",
+    "license": "Original article: Creative Commons Attribution License (http://creativecommons.org/licenses/by/4.0/). Excerpts normalized from publisher XML; Chinese labels and argument links are assistant interpretations."
+  },
+  "analysis": {
+    "language": "zh",
+    "input_scope": "摘要与引言（不含方法、结果及附录正文）",
+    "notice": "本示例由助手根据摘要与引言重建；保留英文原文、中文解读。作者报告的结果及文献定位未经独立核验，样例不构成专家标注基准。",
+    "generator": "Assistant-assisted reconstruction; not expert-validated",
+    "created_at": "2026-10-15"
+  },
+  "passages": [
+    {
+      "id": "P1",
+      "section": "Abstract",
+      "locator": "Abstract, paragraph 1 (publisher XML)",
+      "text": "To investigate the relationships between financial constraints, government subsidies, and corporate innovation, a semi-logarithmic fixed-effect panel model and mediation effect test were applied, based on the data of Chinese listed companies from 2007 to 2017. We find that (1) financial constraints suppress corporate innovation. (2) Government subsidies are targeted at bailing out firms facing financial constraints. (3) Government subsidies promote corporate innovation (4) Government subsidies partially offset the suppression of financial constraints on innovation. We contribute to the fields of public finance, corporate finance, and corporate innovation by: (1) justifying the government subsidies target strategy as a bailout of corporate financial constraints, (2) verifying the corporate-innovation promotion of government subsidies, thus justifying the efficiency of government subsidies, and (3) showing that different types of innovation benefit differently from subsidies, thus justifying subsidies as a structural innovation engine."
+    },
+    {
+      "id": "P2",
+      "section": "1 Introduction",
+      "locator": "1 Introduction, paragraph 1 (publisher XML)",
+      "text": "Chinese corporations have been accused of benefiting from potential unfair competition caused by the government subsidies; this has drawn more attention since the Huawei-related events. Considering the wide application of government subsidies worldwide, this debate points to a major issue in policy making, namely the target of government subsidies, which has been discussed for years [1–3]. One of the most accepted targets of government subsidies is “picking the winner” [1], a strategy for subsidizing innovative corporations. However, the picking-the-winner strategy with a large subsidy amount might cause unfair competition. Another influential target is the political connection bias in the information-asymmetry context [2, 4, 5]. This strategy might cause corruption, and thus lead to the under-efficiency of subsidies [4, 6]."
+    },
+    {
+      "id": "P3",
+      "section": "1 Introduction",
+      "locator": "1 Introduction, paragraph 2 (publisher XML)",
+      "text": "However, in China, the existing research neglects the fact that governmental support is intended to alleviate corporate financial constraints [7, 8], even though this endogeneity has often been implied before [9, 10]. The core values of Chinese socialism should be considered, which require government subsidies to “support small and medium-sized enterprises” [11] and to “alleviate the difficulties of market entities and maintain necessary policy support for achieving this goal” [12]. Therefore, China should not be accused of unfair competition because China’s goal is to use government subsidies to bail Chinese corporations out of their financial constraints [8]. Meanwhile, the bailing-out target of government subsidies might incidentally promote innovation; thus, the potential under-efficiency caused by corruption should not be a concern. According to market competition theory, financial constraints promote corporate innovation because corporations tend to pursue competitive advantages by innovating [13]. Moreover, whether government subsidies promote or crowd out corporate innovation is still being debated in recent research [14]. Another concern is the possible bias or corruption related to political connections [4, 6]."
+    },
+    {
+      "id": "P4",
+      "section": "1 Introduction",
+      "locator": "1 Introduction, paragraph 3 (publisher XML)",
+      "text": "To determine the allocation process and innovation-promotion process of government subsidies, we empirically tested the data of Chinese listed companies from 2007 to 2017. To determine the mechanism, we constructed a semi-logarithmic fixed-effect panel model, mediation effect test, and moderation test. As for the potential targets of government subsidies, we introduced innovative abilities, political connections, and financial constraints, and for the efficiency of government subsidies, we considered corporate innovation."
+    },
+    {
+      "id": "P5",
+      "section": "1 Introduction",
+      "locator": "1 Introduction, paragraph 4 (publisher XML)",
+      "text": "By doing so, we found the following: (1) financial constraints suppress corporate innovation. (2) Financial constraints are the targets of government subsidies, while no evidence of innovation ability or political connection is found. (3) Government subsidies promote corporate innovation. (4) Government subsidies partially and competitively mediate the suppression of financial constraints on corporate innovation. (5) There is a structural difference between exploratory and exploitative innovation."
+    },
+    {
+      "id": "P6",
+      "section": "1 Introduction",
+      "locator": "1 Introduction, paragraph 5 (publisher XML)",
+      "text": "Based on the results, we contribute to the fields of public finance, corporate finance, and corporate innovation. First, we examine the target of government subsidies as corporate bailouts, and verify the government subsidies aimed at alleviating financial constraints. Second, we verify whether financial constraints suppress corporate innovation in the Chinese context. Finally, we verify the efficiency of government subsidies from the perspective of corporate innovation."
+    },
+    {
+      "id": "P7",
+      "section": "1 Introduction",
+      "locator": "1 Introduction, paragraph 6 (publisher XML)",
+      "text": "The contents are as follows: Section 2 reviews related literature and presents hypotheses; Section 3 selects variables and sets up empirical models; Section 4 estimates the models and analysis results; Section 5 examines subsamples and introduces different estimating settings as robustness tests; and Section 6 presents our conclusions."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "N1",
+      "role": "problem",
+      "label": "补贴分配与创新效果引发争论：扶优、政治关系还是缓解融资困难？",
+      "status": "explicit",
+      "core": true,
+      "basis": [
+        {
+          "passage_id": "P2",
+          "quote": "this debate points to a major issue in policy making, namely the target of government subsidies"
+        }
+      ],
+      "rationale": "",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N2",
+      "role": "prior",
+      "label": "引言引用一种观点：融资约束可能推动企业通过创新寻求竞争优势。",
+      "status": "explicit",
+      "core": true,
+      "basis": [
+        {
+          "passage_id": "P3",
+          "quote": "According to market competition theory, financial constraints promote corporate innovation because corporations tend to pursue competitive advantages by innovating [13]."
+        }
+      ],
+      "rationale": "",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N3",
+      "role": "gap",
+      "label": "作者认为：既有研究忽视了补贴旨在缓解企业融资约束的解释。",
+      "status": "explicit",
+      "core": true,
+      "basis": [
+        {
+          "passage_id": "P3",
+          "quote": "the existing research neglects the fact that governmental support is intended to alleviate corporate financial constraints"
+        }
+      ],
+      "rationale": "",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N4",
+      "role": "question",
+      "label": "补贴如何分配，又如何关联企业创新？",
+      "status": "explicit",
+      "core": true,
+      "basis": [
+        {
+          "passage_id": "P4",
+          "quote": "To determine the allocation process and innovation-promotion process of government subsidies"
+        }
+      ],
+      "rationale": "",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N5",
+      "role": "method",
+      "label": "以 2007—2017 年中国上市公司数据，实施固定效应、中介与调节检验。",
+      "status": "explicit",
+      "core": true,
+      "basis": [
+        {
+          "passage_id": "P4",
+          "quote": "we empirically tested the data of Chinese listed companies from 2007 to 2017. To determine the mechanism, we constructed a semi-logarithmic fixed-effect panel model, mediation effect test, and moderation test."
+        }
+      ],
+      "rationale": "",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N6",
+      "role": "finding",
+      "label": "作者报告：融资约束抑制创新，补贴与缓解这种抑制相关。",
+      "status": "explicit",
+      "core": true,
+      "basis": [
+        {
+          "passage_id": "P1",
+          "quote": "Government subsidies partially offset the suppression of financial constraints on innovation."
+        }
+      ],
+      "rationale": "",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N7",
+      "role": "contribution",
+      "label": "贡献主张：从企业救助与创新角度解释补贴的目标和效果。",
+      "status": "explicit",
+      "core": true,
+      "basis": [
+        {
+          "passage_id": "P6",
+          "quote": "First, we examine the target of government subsidies as corporate bailouts, and verify the government subsidies aimed at alleviating financial constraints."
+        }
+      ],
+      "rationale": "",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N8",
+      "role": "finding",
+      "label": "作者报告：样本中未发现创新能力或政治关系是补贴目标的证据。",
+      "status": "explicit",
+      "core": true,
+      "basis": [
+        {
+          "passage_id": "P5",
+          "quote": "Financial constraints are the targets of government subsidies, while no evidence of innovation ability or political connection is found."
+        }
+      ],
+      "rationale": "",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N9",
+      "role": "limitation",
+      "label": "“未发现证据”不能直接读成“政治关系在任何情况下都没有作用”。",
+      "status": "inferred",
+      "core": false,
+      "basis": [
+        {
+          "passage_id": "P5",
+          "quote": "no evidence of innovation ability or political connection is found."
+        }
+      ],
+      "rationale": "这是读者对统计证据范围的限定，不是独立复核数据后的结论。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "N10",
+      "role": "limitation",
+      "label": "待核对：分配选择与反向因果如何处理？",
+      "status": "not_in_input",
+      "core": false,
+      "basis": [],
+      "rationale": "摘要与引言列出模型和检验，但未充分展开因果识别条件。需要阅读方法及结果部分。",
+      "review": "unreviewed",
+      "note": ""
+    }
+  ],
+  "edges": [
+    {
+      "id": "E1",
+      "source": "N1",
+      "target": "N4",
+      "relation": "motivates",
+      "status": "inferred",
+      "basis": [
+        {
+          "passage_id": "P2",
+          "quote": "this debate points to a major issue in policy making, namely the target of government subsidies"
+        }
+      ],
+      "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "E2",
+      "source": "N3",
+      "target": "N4",
+      "relation": "motivates",
+      "status": "inferred",
+      "basis": [
+        {
+          "passage_id": "P3",
+          "quote": "the existing research neglects the fact that governmental support is intended to alleviate corporate financial constraints"
+        }
+      ],
+      "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "E3",
+      "source": "N4",
+      "target": "N5",
+      "relation": "motivates",
+      "status": "inferred",
+      "basis": [
+        {
+          "passage_id": "P4",
+          "quote": "To determine the allocation process and innovation-promotion process of government subsidies, we empirically tested the data of Chinese listed companies from 2007 to 2017."
+        }
+      ],
+      "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "E4",
+      "source": "N5",
+      "target": "N6",
+      "relation": "reports",
+      "status": "explicit",
+      "basis": [
+        {
+          "passage_id": "P1",
+          "quote": "Government subsidies partially offset the suppression of financial constraints on innovation."
+        }
+      ],
+      "rationale": "这是摘要对研究结果的报告。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "E5",
+      "source": "N5",
+      "target": "N8",
+      "relation": "reports",
+      "status": "explicit",
+      "basis": [
+        {
+          "passage_id": "P5",
+          "quote": "Financial constraints are the targets of government subsidies, while no evidence of innovation ability or political connection is found."
+        }
+      ],
+      "rationale": "这是引言预告的研究发现，尚未核对相应表格。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "E6",
+      "source": "N6",
+      "target": "N7",
+      "relation": "supports",
+      "status": "inferred",
+      "basis": [
+        {
+          "passage_id": "P6",
+          "quote": "Based on the results, we contribute to the fields of public finance, corporate finance, and corporate innovation."
+        }
+      ],
+      "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "E7",
+      "source": "N6",
+      "target": "N2",
+      "relation": "contradicts",
+      "status": "inferred",
+      "basis": [
+        {
+          "passage_id": "P5",
+          "quote": "financial constraints suppress corporate innovation."
+        }
+      ],
+      "rationale": "把作者报告的负向结果与引言引用的正向理论预期并置；它们的适用条件仍需核对，不能当作理论被普遍推翻。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "E8",
+      "source": "N9",
+      "target": "N8",
+      "relation": "qualifies",
+      "status": "inferred",
+      "basis": [
+        {
+          "passage_id": "P5",
+          "quote": "no evidence of innovation ability or political connection is found."
+        }
+      ],
+      "rationale": "限制从未检出证据到不存在效应的推断。",
+      "review": "unreviewed",
+      "note": ""
+    },
+    {
+      "id": "E9",
+      "source": "N10",
+      "target": "N6",
+      "relation": "qualifies",
+      "status": "not_in_input",
+      "basis": [],
+      "rationale": "因果解释需要输入之外的识别论证，当前示例不作有效性判断。",
+      "review": "unreviewed",
+      "note": ""
+    }
+  ],
+  "revisions": []
+}
