@@ -79,7 +79,7 @@ class ArgumentMapTests(unittest.TestCase):
         self.data['nodes'][0]['note']=payload
         rendered=pm.render(self.data)
         self.assertNotIn(payload,rendered)
-        packed=rendered.split('<script id="argument-data" type="application/json">',1)[1].split('</script>',1)[0]
+        packed=rendered.split('<script type="application/json" id="argument-data">',1)[1].split('</script>',1)[0]
         restored=json.loads(packed)
         self.assertEqual(payload,restored['nodes'][0]['note'])
         self.assertEqual(payload,restored['paper']['title'])
@@ -101,6 +101,21 @@ class ArgumentMapTests(unittest.TestCase):
         rendered=pm.render(self.data)
         self.assertIn('"review": "excluded"',rendered)
         self.assertEqual(9,len(self.data['edges']))
+
+    def test_optional_translations_and_preferences_are_checked(self):
+        self.data['nodes'][0]['summary_en'] = {'bad': 'text'}
+        self.data['reader_preferences'] = {'language': [], 'mode': 'core'}
+        errors = pm.validate(self.data)[0]
+        self.assertTrue(any('summary_en' in e for e in errors))
+        self.assertTrue(any('reader_preferences' in e for e in errors))
+
+    def test_legacy_data_without_translations_still_renders(self):
+        for obj in [self.data['analysis']] + self.data['nodes'] + self.data['edges']:
+            for key in list(obj):
+                if key.endswith(('_en', '_zh')) or key in ('summary', 'reading_title'):
+                    del obj[key]
+        self.assertEqual([], pm.validate(self.data)[0])
+        self.assertIn('dagre', pm.render(self.data))
 
 if __name__=='__main__':
     unittest.main()

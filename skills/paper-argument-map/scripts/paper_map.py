@@ -48,6 +48,14 @@ def validate(data):
             value = [x for x in value if isinstance(x, dict)]
         lists[name] = value
     passages, nodes, edges = (lists[k] for k in ('passages', 'nodes', 'edges'))
+    for obj in [analysis] + nodes + edges:
+        for key, value in obj.items():
+            if key in {'summary', 'reading_title'} or key.endswith(('_en', '_zh')):
+                if not isinstance(value, str):
+                    errors.append(f'{key} must be text.')
+    prefs = data.get('reader_preferences', {})
+    if not isinstance(prefs, dict) or prefs.get('language', 'zh') not in ('zh', 'en') or prefs.get('mode', 'core') not in ('core', 'full'):
+        errors.append('reader_preferences must contain a supported language and mode.')
     if len(nodes) > 300 or len(edges) > 1500:
         errors.append('Reader supports at most 300 nodes and 1500 edges; split large graphs.')
     all_ids = []
@@ -161,7 +169,10 @@ def render(data):
     # HTML's raw-text parser treats </script> as markup even in JSON strings.
     payload = json.dumps(packed, ensure_ascii=False).replace('&', '\\u0026').replace('<', '\\u003c').replace('>', '\\u003e').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029')
     template = (ASSETS / 'reader.html').read_text(encoding='utf-8')
-    return template.replace('<!--TITLE-->', html.escape(data['paper']['title'])).replace('/*STYLE*/', (ASSETS / 'reader.css').read_text(encoding='utf-8')).replace('/*APP*/', (ASSETS / 'reader.js').read_text(encoding='utf-8')).replace('/*DATA*/', payload)
+    layout = (ASSETS / 'vendor/dagre.min.js').read_text(encoding='utf-8')
+    licenses = (ASSETS / 'vendor/DAGRE-LICENSE.txt').read_text(encoding='utf-8') + '\n' + (ASSETS / 'vendor/dagre.min.js.LEGAL.txt').read_text(encoding='utf-8')
+    layout = '/*\n' + licenses.replace('*/', '* /') + '\n*/\n' + layout
+    return template.replace('<!--TITLE-->', html.escape(data['paper']['title'])).replace('/*STYLE*/', (ASSETS / 'reader.css').read_text(encoding='utf-8')).replace('/*LAYOUT*/', layout).replace('/*APP*/', (ASSETS / 'reader.js').read_text(encoding='utf-8')).replace('/*DATA*/', payload)
 
 
 def main(argv=None):

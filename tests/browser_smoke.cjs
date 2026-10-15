@@ -1,104 +1,46 @@
-/* Integration checks for the offline reader. Requires Playwright + Chromium. */
-const fs = require('node:fs');
-const path = require('node:path');
-const { pathToFileURL } = require('node:url');
-const assert = require('node:assert/strict');
-const { spawnSync } = require('node:child_process');
-const { chromium } = require('playwright');
-const root = path.resolve(__dirname, '..');
-const work = path.join(root, 'work', 'browser-smoke');
-fs.mkdirSync(work, { recursive: true });
-const python = process.env.PYTHON || 'python';
-const script = path.join(root, 'skills', 'paper-argument-map', 'scripts', 'paper_map.py');
-const fixture = path.join(root, 'examples', '01-digital-finance.argument.json');
-const report = path.join(work, 'report.html');
-function py(args) { const r = spawnSync(python, [script, ...args], { encoding: 'utf8' }); assert.equal(r.status, 0, r.stdout + r.stderr); }
-py(['render', fixture, '--out', report]);
-
-(async () => {
-  const browser = await chromium.launch({ headless: true, ...(process.env.PLAYWRIGHT_CHANNEL ? { channel: process.env.PLAYWRIGHT_CHANNEL } : {}) });
-  try {
-    const context = await browser.newContext({ viewport: { width: 1600, height: 1100 }, acceptDownloads: true });
-    const page = await context.newPage();
-    const errors = [], remote = [];
-    page.on('pageerror', error => errors.push(error.message));
-    page.on('request', req => { if (/^https?:/.test(req.url())) remote.push(req.url()); });
-    await page.goto(pathToFileURL(report).href);
-    assert.equal(await page.locator('.graph-node').count(), 8);
-    assert.match(await page.locator('#paper-meta').innerText(), /Lianying Yao, Xiaoli Yang/);
-    assert.doesNotMatch(await page.locator('#notice').innerText(), /加载失败/);
-    await page.locator('[data-node-id="N3"]').click();
-    assert.ok(await page.locator('#passages mark').count() > 0);
-    assert.equal(await page.evaluate(() => {const box=document.getElementById('passages').getBoundingClientRect();const p=document.getElementById('source-P7').getBoundingClientRect();return p.top>=box.top-1&&p.top<box.bottom;}), true, 'Selected source must actually scroll into view.');
-    assert.match(await page.locator('#detail').innerText(), /间接路径/);
-    await page.screenshot({ path: path.join(work, 'desktop.png'), fullPage: true });
-    await page.locator('[aria-label="查看关系 E1"]').click();
-    assert.match(await page.locator('#detail').innerText(), /关系：引出/);
-    await page.locator('[data-node-id="N3"]').click();
-    await page.locator('#focus-chain').click();
-    assert.ok(await page.locator('.graph-node').count() < 8);
-    await page.locator('#focus-chain').click();
-    await page.locator('#view-outline').click();
-    assert.equal(await page.locator('.outline-card').count(), 8);
-    assert.equal(await page.locator('#map-container').isVisible(), false);
-    await page.locator('#view-map').click();
-    await page.locator('#all-nodes').check();
-    assert.equal(await page.locator('.graph-node').count(), 10);
-    await page.locator('[data-node-id="N9"]').click();
-    assert.match(await page.locator('#detail').innerText(), /当前输入中没有对应证据/);
-    await page.locator('[data-node-id="N4"]').click();
-    await page.getByRole('button', { name: '编辑表述／笔记', exact: true }).click();
-    await page.locator('#edit-label').fill('数字金融是否促进创新？［读者修订］');
-    await page.locator('#edit-note').fill('</script><script>window.PWNED=true</script>');
-    await page.getByRole('button', { name: '保存修订', exact: true }).click();
-    assert.match(await page.locator('#detail').innerText(), /读者修订/);
-    assert.equal(await page.evaluate(() => window.PWNED), undefined);
-    await page.getByRole('button', { name: '接受此解读', exact: true }).click();
-    assert.match(await page.locator('#detail').innerText(), /已接受解读/);
-    await page.getByRole('button', { name: '排除此项', exact: true }).click();
-    assert.equal(await page.locator('.graph-node').count(), 9);
-    await page.locator('#show-excluded').check();
-    assert.equal(await page.locator('.graph-node').count(), 10);
-    await page.getByRole('button', { name: '恢复项目', exact: true }).click();
-    const jsonPromise = page.waitForEvent('download');
-    await page.locator('#export-json').click();
-    const jsonFile = path.join(work, 'revised.json');
-    await (await jsonPromise).saveAs(jsonFile);
-    py(['validate', jsonFile]);
-    const revised = JSON.parse(fs.readFileSync(jsonFile, 'utf8'));
-    assert.equal(revised.revisions.length, 4);
-    assert.match(revised.nodes.find(n => n.id === 'N4').label, /读者修订/);
-    const htmlPromise = page.waitForEvent('download');
-    await page.locator('#export-html').click();
-    const htmlFile = path.join(work, 'revised.html');
-    await (await htmlPromise).saveAs(htmlFile);
-    await page.goto(pathToFileURL(htmlFile).href);
-    assert.equal(await page.locator('.graph-node').count(), 8);
-    await page.locator('[data-node-id="N4"]').click();
-    assert.match(await page.locator('#detail').innerText(), /读者修订/);
-    assert.equal(await page.evaluate(() => window.PWNED), undefined);
-    const bad = JSON.parse(fs.readFileSync(fixture, 'utf8'));
-    bad.nodes[0].basis[0].quote = 'This sentence is not in the paper.';
-    await page.locator('#import-file').setInputFiles({ name: 'bad.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify(bad)) });
-    await page.waitForFunction(() => document.getElementById('toast').textContent.includes('导入失败'));
-    assert.match(await page.locator('#detail').innerText(), /读者修订/);
-    await page.locator('#import-file').setInputFiles(path.join(root, 'examples', '02-government-subsidies.argument.json'));
-    await page.waitForFunction(() => document.getElementById('paper-title').textContent.includes('government subsidies'));
-    assert.equal(await page.locator('.graph-node').count(), 8);
-    await page.locator('#source-search').fill('not-a-real-term-7721');
-    assert.match(await page.locator('#passages').innerText(), /未找到/);
-    await page.locator('[data-node-id="N1"]').click();
-    assert.ok(await page.locator('#passages mark').count() > 0);
-    await page.locator('#import-file').setInputFiles(path.join(root, 'examples', '03-state-equity.argument.json'));
-    await page.waitForFunction(() => document.getElementById('paper-title').textContent.startsWith('State equity'));
-    assert.match(await page.locator('#paper-meta').innerText(), /Qian Xiao/);
-    assert.doesNotMatch(await page.locator('#paper-meta').innerText(), /Qadri/);
-    await page.setViewportSize({ width: 390, height: 844 });
-    await page.screenshot({ path: path.join(work, 'mobile.png'), fullPage: true });
-    const overflow = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1);
-    assert.equal(overflow, false, 'Page must not overflow viewport; map may scroll within its panel.');
-    assert.deepEqual(errors, []);
-    assert.deepEqual(remote, [], 'Offline report should make no remote requests.');
-    console.log('PASS: source navigation, overview/detail views, paths, edits, exclusion/restoration, JSON + HTML export/reopen, injection defense, import validation, all three papers, responsive layout, zero remote requests.');
-  } finally { await browser.close(); }
-})().catch(error => { console.error(error); process.exitCode = 1; });
+/* Real offline-reader interactions and figure geometry; Playwright + Chromium/Edge. */
+const fs=require('node:fs'),path=require('node:path'),{pathToFileURL}=require('node:url'),assert=require('node:assert/strict'),{spawnSync}=require('node:child_process'),{chromium}=require('playwright');
+const root=path.resolve(__dirname,'..'),work=path.join(root,'work','browser-smoke');fs.mkdirSync(work,{recursive:true});
+const script=path.join(root,'skills','paper-argument-map','scripts','paper_map.py'),fixture=path.join(root,'examples','01-digital-finance.argument.json'),report=path.join(work,'report.html');
+function py(args){const r=spawnSync(process.env.PYTHON||'python',[script,...args],{encoding:'utf8'});assert.equal(r.status,0,r.stdout+r.stderr);}
+py(['render',fixture,'--out',report]);
+(async()=>{
+const browser=await chromium.launch({headless:true,...(process.env.PLAYWRIGHT_CHANNEL?{channel:process.env.PLAYWRIGHT_CHANNEL}:{})});
+try{
+const context=await browser.newContext({viewport:{width:1440,height:1100},acceptDownloads:true}),page=await context.newPage(),errors=[],remote=[];
+page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(/^https?:/.test(r.url()))remote.push(r.url());});
+const menu=async()=>{if(!await page.locator('#more-menu').evaluate(x=>x.open))await page.locator('#more-menu > summary').click();};
+const importData=async(d)=>{await page.locator('#import-file').setInputFiles({name:'map.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(d))});};
+async function geometry(){const issues=await page.evaluate(()=>{
+const bad=[],cards=[...document.querySelectorAll('.graph-node')].map(n=>({n,r:n.querySelector('.card').getBoundingClientRect()}));
+for(let i=0;i<cards.length;i++){const {n,r}=cards[i];for(const text of n.querySelectorAll('text')){const b=text.getBoundingClientRect();if(b.left<r.left-1||b.right>r.right+1||b.top<r.top-1||b.bottom>r.bottom+1)bad.push(n.dataset.nodeId+' clipped text');}for(let j=i+1;j<cards.length;j++){const b=cards[j].r;if(Math.min(r.right,b.right)>Math.max(r.left,b.left)+1&&Math.min(r.bottom,b.bottom)>Math.max(r.top,b.top)+1)bad.push('overlapping nodes');}}
+for(const edge of document.querySelectorAll('.edge-line')){const length=edge.getTotalLength();for(let i=3;i<length-3;i+=5){const p=edge.getPointAtLength(i),s=new DOMPoint(p.x,p.y).matrixTransform(edge.getScreenCTM());if(cards.some(({r})=>s.x>r.left+3&&s.x<r.right-3&&s.y>r.top+3&&s.y<r.bottom-3))bad.push(edge.dataset.edgeId+' crosses a node');}}
+return bad;});if(issues.length)await page.screenshot({path:path.join(work,'geometry-failure.png'),fullPage:true});assert.deepEqual(issues,[]);}
+await page.goto(pathToFileURL(report).href);
+assert.equal(await page.locator('.graph-node').count(),6);assert.equal(await page.locator('#inspector').isVisible(),false);assert.equal(await page.locator('#paper-info').evaluate(x=>x.open),false);await geometry();
+await page.screenshot({path:path.join(work,'desktop.png'),fullPage:true});
+await page.locator('#lang-en').click();assert.equal(await page.locator('html').getAttribute('lang'),'en');assert.doesNotMatch(await page.locator('#graph').textContent(),/[\u4e00-\u9fff]/);await geometry();await page.screenshot({path:path.join(work,'english.png'),fullPage:true});
+await page.locator('#lang-zh').click();await page.locator('[data-node-id="N3"]').click();assert.match(await page.locator('#detail').innerText(),/间接路径/);assert.ok(await page.locator('#detail blockquote').count()>0);
+await page.locator('#detail .source-jump').first().click();assert.ok(await page.locator('#passages mark').count()>0);
+assert.equal(await page.evaluate(()=>{const b=document.getElementById('passages').getBoundingClientRect(),p=document.getElementById('source-P7').getBoundingClientRect();return p.top>=b.top-1&&p.top<b.bottom;}),true);
+await page.locator('#tab-detail').click();await page.screenshot({path:path.join(work,'evidence.png'),fullPage:true});
+// Keyboard activation tests actual accessible relation selection.
+await page.locator('[data-edge-hit="E1"]').focus();await page.keyboard.press('Enter');assert.match(await page.locator('#detail').innerText(),/关系：引出/);
+await page.locator('[data-node-id="N3"]').click();await page.locator('#focus-chain').click();assert.ok(await page.locator('.graph-node').count()<6);await page.locator('#focus-chain').click();
+await menu();await page.locator('#view-outline').click();assert.equal(await page.locator('.outline-card').count(),6);assert.equal(await page.locator('#map-container').isVisible(),false);
+await page.locator('#view-full').click();assert.equal(await page.locator('.graph-node').count(),10);await geometry();await page.locator('[data-node-id="N9"]').click();assert.match(await page.locator('#detail').innerText(),/当前输入中没有对应证据/);
+await page.locator('[data-node-id="N4"]').click();await page.getByRole('button',{name:'编辑／笔记',exact:true}).click();await page.locator('#edit-label').fill('数字金融是否促进创新？［读者修订］');await page.locator('#edit-summary').fill('数字金融与创新：读者修订');await page.locator('#edit-note').fill('</script><script>window.PWNED=true</script>');await page.getByRole('button',{name:'保存修订',exact:true}).click();assert.match(await page.locator('#detail').innerText(),/读者修订/);assert.equal(await page.evaluate(()=>window.PWNED),undefined);
+await page.getByRole('button',{name:'接受此解读',exact:true}).click();await page.getByRole('button',{name:'排除此项',exact:true}).click();assert.equal(await page.locator('.graph-node').count(),9);await menu();await page.locator('#show-excluded').check();assert.equal(await page.locator('.graph-node').count(),10);await page.locator('#more-menu > summary').click();await page.getByRole('button',{name:'恢复项目',exact:true}).click();
+async function download(id,name){await menu();const promise=page.waitForEvent('download');await page.locator('#'+id).click();const file=path.join(work,name);await(await promise).saveAs(file);return file;}
+const svgFile=await download('export-svg','figure.svg');assert.match(await page.locator('#dirty-state').innerText(),/尚未导出/,'An image export must not mark editable data as saved.');assert.match(fs.readFileSync(svgFile,'utf8'),/<svg/);assert.doesNotMatch(fs.readFileSync(svgFile,'utf8'),/class="edge-hit"/);
+const jsonFile=await download('export-json','revised.json');py(['validate',jsonFile]);const revised=JSON.parse(fs.readFileSync(jsonFile,'utf8'));assert.equal(revised.revisions.length,4);assert.match(revised.nodes.find(n=>n.id==='N4').label,/读者修订/);
+await page.locator('#lang-en').click();const htmlFile=await download('export-html','revised.html');await page.goto(pathToFileURL(htmlFile).href);assert.equal(await page.locator('html').getAttribute('lang'),'en');assert.equal(await page.locator('.graph-node').count(),10);await page.locator('#lang-zh').click();await page.locator('[data-node-id="N4"]').click();assert.match(await page.locator('#detail').innerText(),/读者修订/);assert.equal(await page.evaluate(()=>window.PWNED),undefined);
+const bad=JSON.parse(fs.readFileSync(fixture,'utf8'));bad.nodes[0].basis[0].quote='This sentence is absent.';await importData(bad);await page.waitForFunction(()=>document.getElementById('toast').textContent.includes('导入失败'));assert.match(await page.locator('#detail').innerText(),/读者修订/);
+const badTranslation=JSON.parse(fs.readFileSync(fixture,'utf8'));badTranslation.nodes[0].summary_en={bad:'text'};await importData(badTranslation);await page.waitForFunction(()=>document.getElementById('toast').textContent.includes('summary_en'));assert.match(await page.locator('#detail').innerText(),/读者修订/);
+for(const name of ['01-digital-finance','02-government-subsidies','03-state-equity']){const d=JSON.parse(fs.readFileSync(path.join(root,'examples',name+'.argument.json'),'utf8'));await importData(d);await page.waitForFunction(title=>document.getElementById('paper-title').textContent===title,d.paper.title);for(const l of ['zh','en']){await page.locator('#lang-'+l).click();for(const mode of ['view-map','view-full']){await page.locator('#'+mode).click();await geometry();if(mode==='view-full')await page.screenshot({path:path.join(work,name+'-'+l+'-full.png'),fullPage:true});}}}
+// Keep genuine cycles and long, untranslated legacy labels inspectable.
+const legacy=JSON.parse(fs.readFileSync(fixture,'utf8'));for(const n of legacy.nodes){delete n.summary;delete n.summary_en;delete n.label_en;}legacy.nodes[0].label='A very long statement with anextremelylongunbrokenidentifierthatexceedsthenormalcardwidth plus additional qualifiers that must remain visible in the figure.';legacy.edges.push({...legacy.edges[0],id:'E100',source:'N4',target:'N1'});await importData(legacy);await page.waitForFunction(()=>document.querySelector('[data-edge-id="E100"]'));await geometry();await page.locator('#lang-en').click();await page.locator('[data-node-id="N1"]').click();assert.match(await page.locator('#detail').innerText(),/No translation/);
+await importData(JSON.parse(fs.readFileSync(fixture,'utf8')));await page.waitForFunction(()=>!document.querySelector('[data-edge-id="E100"]'));await page.setViewportSize({width:390,height:844});await page.locator('#view-map').click();await geometry();await page.waitForTimeout(5100);await page.screenshot({path:path.join(work,'mobile.png'),fullPage:true});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);await page.locator('[data-node-id="N4"]').click();assert.equal(await page.locator('#inspector').isVisible(),true);await page.locator('#close-inspector').click();
+assert.deepEqual(errors,[]);assert.deepEqual(remote,[]);console.log('PASS: bilingual core/full maps for 3 papers, non-overlapping geometry and unclipped labels, no edges through cards, evidence navigation, keyboard, edits, exclusions, JSON/HTML/SVG exports, injection defense, malformed import retention, cycles, legacy data, mobile and zero network requests.');
+}finally{await browser.close();}
+})().catch(e=>{console.error(e);process.exitCode=1;});

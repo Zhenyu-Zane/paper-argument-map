@@ -34,3 +34,9 @@ Use a small qualitative pilot to refine tasks and estimate variance; plan a prop
 - Benefits may depend on reader expertise, paper type, and graph density.
 
 These are hypotheses, not established product claims.
+
+## v0.2 interaction and layout checks
+
+The reader defaults to six core claims for the three bundled examples, with evidence hidden until selected. Fourteen Python tests cover structure, source matching, unsafe embedded text, optional display-field types and compatibility with untranslated v0.1 data. Browser checks exercise both languages and core/full views for all three examples, measure text containment and node separation, and sample edge paths to detect passage through cards. They also cover source scrolling, keyboard selection, revisions, rejection of invalid imports without losing current data, JSON/HTML/SVG exports, cycle preservation, long legacy labels, mobile layout and absence of network requests.
+
+These checks establish technical behavior on the tested examples, not universal layout quality or improved comprehension. The redesigned default, full map and text outline should still be compared in a reader study, including time to identify the main question, contribution and unsupported inference. Bilingual equivalence requires semantic review, not just checking that interface strings changed.

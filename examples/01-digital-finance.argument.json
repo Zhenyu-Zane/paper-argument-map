@@ -13,7 +13,11 @@
     "input_scope": "摘要与引言（不含方法、结果及附录正文）",
     "notice": "本示例由助手根据摘要与引言重建；保留英文原文、中文解读。作者报告的结果及文献定位未经独立核验，样例不构成专家标注基准。",
     "generator": "Assistant-assisted reconstruction; not expert-validated",
-    "created_at": "2026-10-15"
+    "created_at": "2026-10-15",
+    "reading_title": "数字金融如何影响中小企业创新？",
+    "reading_title_en": "How might digital finance support SME innovation?",
+    "input_scope_en": "Abstract and Introduction only; excludes the bodies of Methods, Results and appendices.",
+    "notice_en": "Assistant-assisted reconstruction from the abstract and introduction. Original quotations are preserved. Reported findings and literature positioning have not been independently verified; this is not an expert-labeled benchmark."
   },
   "passages": [
     {
@@ -84,14 +88,18 @@
       ],
       "rationale": "",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "创新需要稳定资金，但中小企业融资困难",
+      "label_en": "Innovation needs stable funding, yet SMEs face financing constraints.",
+      "summary_en": "SME innovation faces a funding gap",
+      "rationale_en": ""
     },
     {
       "id": "N2",
       "role": "prior",
       "label": "作者回顾：数字金融可能拓宽中小企业融资渠道。",
       "status": "explicit",
-      "core": true,
+      "core": false,
       "basis": [
         {
           "passage_id": "P2",
@@ -100,7 +108,11 @@
       ],
       "rationale": "",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "数字金融可能拓宽融资渠道",
+      "label_en": "The authors review how digital finance may expand SME financing channels.",
+      "summary_en": "Digital finance may widen access to funding",
+      "rationale_en": ""
     },
     {
       "id": "N3",
@@ -116,7 +128,11 @@
       ],
       "rationale": "",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "融资约束的中介路径仍待探索",
+      "label_en": "The authors identify a gap in research on the indirect path from digital finance to innovation through financing constraints.",
+      "summary_en": "The financing-constraint pathway is underexplored",
+      "rationale_en": ""
     },
     {
       "id": "N4",
@@ -132,7 +148,11 @@
       ],
       "rationale": "",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "数字金融能否通过缓解融资约束促进创新？",
+      "label_en": "Can digital finance ease financing constraints and promote firm innovation?",
+      "summary_en": "Can easier financing link digital finance to innovation?",
+      "rationale_en": ""
     },
     {
       "id": "N5",
@@ -148,7 +168,11 @@
       ],
       "rationale": "",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "创业板企业，2011—2020；固定效应与中介模型",
+      "label_en": "The study matches Chinese GEM-listed firms in 2011–2020 with the digital financial inclusion index and uses fixed-effects and mediation models.",
+      "summary_en": "GEM firms, 2011–2020; fixed-effects and mediation models",
+      "rationale_en": ""
     },
     {
       "id": "N6",
@@ -164,7 +188,11 @@
       ],
       "rationale": "",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "作者报告：数字金融促进创新，并归因于融资约束缓解",
+      "label_en": "The abstract reports that digital finance promotes innovation; the authors interpret this through eased financing constraints.",
+      "summary_en": "Reported innovation gains are attributed to eased financing constraints",
+      "rationale_en": ""
     },
     {
       "id": "N7",
@@ -180,14 +208,18 @@
       ],
       "rationale": "",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "将融资约束纳入数字金融与创新的解释",
+      "label_en": "The claimed contribution is to introduce financing constraints as a mediator in research on digital finance and innovation.",
+      "summary_en": "Financing constraints connect digital finance and innovation",
+      "rationale_en": ""
     },
     {
       "id": "N8",
       "role": "finding",
       "label": "作者还报告：不同产权性质与地区的企业存在异质性。",
       "status": "explicit",
-      "core": true,
+      "core": false,
       "basis": [
         {
           "passage_id": "P1",
@@ -196,7 +228,11 @@
       ],
       "rationale": "",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "效果随产权性质与地区而不同",
+      "label_en": "The authors also report heterogeneity across ownership types and regions.",
+      "summary_en": "Reported effects vary by ownership and region",
+      "rationale_en": ""
     },
     {
       "id": "N9",
@@ -207,7 +243,11 @@
       "basis": [],
       "rationale": "所读摘要与引言说明模型类型，但没有展开识别条件；需要查阅方法、稳健性检验与附录。不能据此断言全文未处理内生性。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "待核对：共同变化与反向因果如何排除？",
+      "label_en": "To check: how do these models rule out common trends and reverse causality?",
+      "summary_en": "How are confounding and reverse causality addressed?",
+      "rationale_en": "The abstract and introduction name the models but do not elaborate identification conditions. Methods, robustness checks and appendices must be read; this does not imply the full paper ignores endogeneity."
     },
     {
       "id": "N10",
@@ -223,7 +263,11 @@
       ],
       "rationale": "这是读者针对模型类型提出的识别要求，不是作者在这段文字中明确陈述的假设。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "模型名称本身不能保证因果识别",
+      "label_en": "A causal interpretation requires further identification evidence; fixed-effects or mediation model labels alone do not guarantee it.",
+      "summary_en": "Model labels alone do not establish causal identification",
+      "rationale_en": "This is a reader-imposed identification requirement, not an assumption explicitly stated by the authors in the supplied passage."
     }
   ],
   "edges": [
@@ -241,7 +285,8 @@
       ],
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
     },
     {
       "id": "E2",
@@ -257,7 +302,8 @@
       ],
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
     },
     {
       "id": "E3",
@@ -273,7 +319,8 @@
       ],
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
     },
     {
       "id": "E4",
@@ -289,7 +336,8 @@
       ],
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
     },
     {
       "id": "E5",
@@ -305,7 +353,8 @@
       ],
       "rationale": "摘要报告研究结果；此关系不表示读者已经核验估计或识别。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "The abstract reports results; this relation does not mean the reader has verified estimation or identification."
     },
     {
       "id": "E6",
@@ -321,7 +370,8 @@
       ],
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
     },
     {
       "id": "E7",
@@ -337,7 +387,8 @@
       ],
       "rationale": "摘要报告异质性发现。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "The abstract reports heterogeneous findings."
     },
     {
       "id": "E8",
@@ -348,7 +399,8 @@
       "basis": [],
       "rationale": "当前输入尚不能核验作者对结果的因果解释；这不是对全文识别有效性的结论。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "The supplied text does not allow verification of the authors’ causal interpretation. This is not a judgment about identification in the full paper."
     },
     {
       "id": "E9",
@@ -364,7 +416,8 @@
       ],
       "rationale": "读者提出的识别边界，限定如何解释作者报告的结果。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "A reader-imposed identification boundary limits interpretation of the reported results."
     }
   ],
   "revisions": []

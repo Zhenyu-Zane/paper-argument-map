@@ -13,7 +13,11 @@
     "input_scope": "摘要与引言（不含方法、结果及附录正文）",
     "notice": "本示例由助手根据摘要与引言重建；保留英文原文、中文解读。作者报告的结果及文献定位未经独立核验，样例不构成专家标注基准。",
     "generator": "Assistant-assisted reconstruction; not expert-validated",
-    "created_at": "2026-10-15"
+    "created_at": "2026-10-15",
+    "reading_title": "国资参股为何可能缓解民企融资约束？",
+    "reading_title_en": "How might state equity ease private firms’ financing constraints?",
+    "input_scope_en": "Abstract and Introduction only; excludes the bodies of Methods, Results and appendices.",
+    "notice_en": "Assistant-assisted reconstruction from the abstract and introduction. Original quotations are preserved. Reported findings and literature positioning have not been independently verified; this is not an expert-labeled benchmark."
   },
   "passages": [
     {
@@ -74,14 +78,18 @@
       ],
       "rationale": "",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "融资困难限制民企发展与创新",
+      "label_en": "Private firms continue to face financing difficulties that affect development and innovation.",
+      "summary_en": "Financing difficulties constrain private firms",
+      "rationale_en": ""
     },
     {
       "id": "N2",
       "role": "prior",
       "label": "作者提出：竞争压力会提高企业投资与外部融资需求。",
       "status": "explicit",
-      "core": true,
+      "core": false,
       "basis": [
         {
           "passage_id": "P3",
@@ -90,7 +98,11 @@
       ],
       "rationale": "",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "竞争压力提高投资与外部融资需求",
+      "label_en": "The authors propose that competitive pressure increases investment and external financing needs.",
+      "summary_en": "Competition raises investment and funding needs",
+      "rationale_en": ""
     },
     {
       "id": "N3",
@@ -114,7 +126,11 @@
       ],
       "rationale": "",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "非上市企业证据与竞争机制仍待补充",
+      "label_en": "The authors identify gaps concerning unlisted firms, the competition mechanism and the effects of state equity participation.",
+      "summary_en": "Evidence on unlisted firms and the competition mechanism is incomplete",
+      "rationale_en": ""
     },
     {
       "id": "N4",
@@ -130,7 +146,11 @@
       ],
       "rationale": "",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "国资参股能否通过减轻竞争压力缓解融资约束？",
+      "label_en": "Can state equity ease private firms’ financing constraints, and what role does competitive pressure play?",
+      "summary_en": "Can reduced competitive pressure link state equity to easier financing?",
+      "rationale_en": ""
     },
     {
       "id": "N5",
@@ -146,7 +166,11 @@
       ],
       "rationale": "",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "世界银行民企调查；与 2009—2020 年上市企业样本",
+      "label_en": "The study combines World Bank surveys of private firms with a sample of listed firms in 2009–2020.",
+      "summary_en": "World Bank private-firm surveys and listed firms, 2009–2020",
+      "rationale_en": ""
     },
     {
       "id": "N6",
@@ -162,7 +186,11 @@
       ],
       "rationale": "",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "作者报告：国资参与缓解融资约束，并归因于竞争压力减轻",
+      "label_en": "The abstract reports that state participation eases financing constraints; the authors attribute this to reduced competitive pressure.",
+      "summary_en": "Reported financing relief is attributed to reduced competitive pressure",
+      "rationale_en": ""
     },
     {
       "id": "N7",
@@ -178,14 +206,18 @@
       ],
       "rationale": "",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "引入竞争压力机制，补充中小民企证据",
+      "label_en": "The claimed contribution is to introduce a competitive-pressure mechanism and add evidence on small and medium-sized private firms.",
+      "summary_en": "A competition mechanism and additional evidence on smaller private firms",
+      "rationale_en": ""
     },
     {
       "id": "N8",
       "role": "finding",
       "label": "作者报告：新兴、非集团和非上市企业的缓解效应更明显。",
       "status": "explicit",
-      "core": true,
+      "core": false,
       "basis": [
         {
           "passage_id": "P1",
@@ -194,7 +226,11 @@
       ],
       "rationale": "",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "新兴、非集团和非上市企业的效果更明显",
+      "label_en": "The authors report stronger alleviation effects for emerging, non-group and unlisted firms.",
+      "summary_en": "Stronger reported effects for emerging, non-group and unlisted firms",
+      "rationale_en": ""
     },
     {
       "id": "N9",
@@ -205,7 +241,11 @@
       "basis": [],
       "rationale": "所读摘要与引言没有充分说明用于处理国资进入选择性的识别设计；需要进一步阅读方法与稳健性部分。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "待核对：国资进入的选择机制如何影响解释？",
+      "label_en": "To check: how does selection into state equity participation affect interpretation of the results?",
+      "summary_en": "How does selection into state participation affect interpretation?",
+      "rationale_en": "The supplied abstract and introduction do not sufficiently explain identification of selection into state participation. Methods and robustness checks need to be examined."
     },
     {
       "id": "N10",
@@ -221,7 +261,11 @@
       ],
       "rationale": "保留 whether 的疑问性质，并与作者报告的异质性相区分。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "检验普遍性，不等于证明所有企业同等受益",
+      "label_en": "Testing universality is a research objective, not evidence that all firms benefit equally.",
+      "summary_en": "Testing universality does not establish equal benefits for all firms",
+      "rationale_en": "Preserve the uncertainty implied by “whether” and distinguish the research objective from the reported heterogeneity."
     }
   ],
   "edges": [
@@ -239,7 +283,8 @@
       ],
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
     },
     {
       "id": "E2",
@@ -255,7 +300,8 @@
       ],
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
     },
     {
       "id": "E3",
@@ -271,7 +317,8 @@
       ],
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
     },
     {
       "id": "E4",
@@ -287,7 +334,8 @@
       ],
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
     },
     {
       "id": "E5",
@@ -303,7 +351,8 @@
       ],
       "rationale": "摘要对研究结果的报告，不是对原始数据的复核。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "A report of results in the abstract, not a reanalysis of the original data."
     },
     {
       "id": "E6",
@@ -319,7 +368,8 @@
       ],
       "rationale": "作者在摘要中报告异质性。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "The author reports heterogeneity in the abstract."
     },
     {
       "id": "E7",
@@ -335,7 +385,8 @@
       ],
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
     },
     {
       "id": "E8",
@@ -346,7 +397,8 @@
       "basis": [],
       "rationale": "当前输入未展开识别设计，不能据摘要措辞判断因果识别是否成立。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "The supplied text does not elaborate identification; wording in the abstract cannot establish whether causal identification holds."
     },
     {
       "id": "E9",
@@ -362,7 +414,8 @@
       ],
       "rationale": "区别检验目标与已建立的普遍性结论。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "Distinguishes the objective of testing universality from an established universal conclusion."
     }
   ],
   "revisions": []

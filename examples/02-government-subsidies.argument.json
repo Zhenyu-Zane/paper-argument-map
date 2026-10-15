@@ -13,7 +13,11 @@
     "input_scope": "摘要与引言（不含方法、结果及附录正文）",
     "notice": "本示例由助手根据摘要与引言重建；保留英文原文、中文解读。作者报告的结果及文献定位未经独立核验，样例不构成专家标注基准。",
     "generator": "Assistant-assisted reconstruction; not expert-validated",
-    "created_at": "2026-10-15"
+    "created_at": "2026-10-15",
+    "reading_title": "政府补贴如何关联企业融资与创新？",
+    "reading_title_en": "How do subsidies relate to firm financing and innovation?",
+    "input_scope_en": "Abstract and Introduction only; excludes the bodies of Methods, Results and appendices.",
+    "notice_en": "Assistant-assisted reconstruction from the abstract and introduction. Original quotations are preserved. Reported findings and literature positioning have not been independently verified; this is not an expert-labeled benchmark."
   },
   "passages": [
     {
@@ -74,14 +78,18 @@
       ],
       "rationale": "",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "补贴究竟扶优、惠及关系企业，还是缓解融资困难？",
+      "label_en": "Subsidy allocation and innovation effects are contested: rewarding strong firms, political connections, or easing financing difficulties?",
+      "summary_en": "What drives subsidies: performance, connections, or financing needs?",
+      "rationale_en": ""
     },
     {
       "id": "N2",
       "role": "prior",
       "label": "引言引用一种观点：融资约束可能推动企业通过创新寻求竞争优势。",
       "status": "explicit",
-      "core": true,
+      "core": false,
       "basis": [
         {
           "passage_id": "P3",
@@ -90,7 +98,11 @@
       ],
       "rationale": "",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "一种既有观点：融资约束可能激发创新",
+      "label_en": "The introduction cites the view that financing constraints may motivate firms to innovate for competitive advantage.",
+      "summary_en": "One cited view: financing constraints may spur innovation",
+      "rationale_en": ""
     },
     {
       "id": "N3",
@@ -106,7 +118,11 @@
       ],
       "rationale": "",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "缓解融资约束的补贴动机受到忽视",
+      "label_en": "The authors argue that prior research overlooks easing firms’ financing constraints as a motive for subsidies.",
+      "summary_en": "The financing-relief motive has been overlooked",
+      "rationale_en": ""
     },
     {
       "id": "N4",
@@ -122,7 +138,11 @@
       ],
       "rationale": "",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "补贴如何分配，又如何关联企业创新？",
+      "label_en": "How are subsidies allocated, and how do they relate to firm innovation?",
+      "summary_en": "How are subsidies allocated, and how do they relate to innovation?",
+      "rationale_en": ""
     },
     {
       "id": "N5",
@@ -138,7 +158,11 @@
       ],
       "rationale": "",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "中国上市企业，2007—2017；固定效应、中介与调节检验",
+      "label_en": "The study uses Chinese listed firms in 2007–2017 for fixed-effects, mediation and moderation tests.",
+      "summary_en": "Chinese listed firms, 2007–2017; fixed-effects, mediation and moderation tests",
+      "rationale_en": ""
     },
     {
       "id": "N6",
@@ -154,7 +178,11 @@
       ],
       "rationale": "",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "作者报告：融资约束抑制创新，补贴与缓解抑制相关",
+      "label_en": "The authors report that financing constraints suppress innovation and subsidies are associated with easing this suppression.",
+      "summary_en": "Subsidies are associated with easing constraints on innovation",
+      "rationale_en": ""
     },
     {
       "id": "N7",
@@ -170,14 +198,18 @@
       ],
       "rationale": "",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "从企业救助与创新解释补贴的目标和效果",
+      "label_en": "The claimed contribution is to interpret subsidy objectives and effects through firm bailout and innovation motives.",
+      "summary_en": "Explain subsidy objectives and effects through bailout and innovation",
+      "rationale_en": ""
     },
     {
       "id": "N8",
       "role": "finding",
       "label": "作者报告：样本中未发现创新能力或政治关系是补贴目标的证据。",
       "status": "explicit",
-      "core": true,
+      "core": false,
       "basis": [
         {
           "passage_id": "P5",
@@ -186,7 +218,11 @@
       ],
       "rationale": "",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "未发现创新能力或政治关系是补贴目标的证据",
+      "label_en": "The authors report no evidence in their sample that innovative ability or political connections are targets of subsidies.",
+      "summary_en": "No evidence of targeting by innovation or political connections in this sample",
+      "rationale_en": ""
     },
     {
       "id": "N9",
@@ -202,7 +238,11 @@
       ],
       "rationale": "这是读者对统计证据范围的限定，不是独立复核数据后的结论。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "未发现证据，不等于任何情况下都没有作用",
+      "label_en": "A lack of evidence cannot be read as political connections having no effect in any circumstances.",
+      "summary_en": "No detected evidence does not imply no effect everywhere",
+      "rationale_en": "This limits the scope of statistical evidence; it is not a conclusion from independently reanalyzing the data."
     },
     {
       "id": "N10",
@@ -213,7 +253,11 @@
       "basis": [],
       "rationale": "摘要与引言列出模型和检验，但未充分展开因果识别条件。需要阅读方法及结果部分。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "summary": "待核对：分配选择与反向因果如何处理？",
+      "label_en": "To check: how are selection in subsidy allocation and reverse causality handled?",
+      "summary_en": "How are allocation selection and reverse causality addressed?",
+      "rationale_en": "The abstract and introduction list models and tests but do not fully explain causal identification. The methods and results need to be examined."
     }
   ],
   "edges": [
@@ -231,7 +275,8 @@
       ],
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
     },
     {
       "id": "E2",
@@ -247,7 +292,8 @@
       ],
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
     },
     {
       "id": "E3",
@@ -263,7 +309,8 @@
       ],
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
     },
     {
       "id": "E4",
@@ -279,7 +326,8 @@
       ],
       "rationale": "这是摘要对研究结果的报告。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "This is a report of findings in the abstract."
     },
     {
       "id": "E5",
@@ -295,7 +343,8 @@
       ],
       "rationale": "这是引言预告的研究发现，尚未核对相应表格。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "This finding is announced in the introduction; the relevant tables have not been checked."
     },
     {
       "id": "E6",
@@ -311,7 +360,8 @@
       ],
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
     },
     {
       "id": "E7",
@@ -327,7 +377,8 @@
       ],
       "rationale": "把作者报告的负向结果与引言引用的正向理论预期并置；它们的适用条件仍需核对，不能当作理论被普遍推翻。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "The reported negative result is juxtaposed with a positive theoretical prediction cited in the introduction. Their conditions still need checking; this does not establish a universal refutation."
     },
     {
       "id": "E8",
@@ -343,7 +394,8 @@
       ],
       "rationale": "限制从未检出证据到不存在效应的推断。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "Limits the inference from no detected evidence to no effect."
     },
     {
       "id": "E9",
@@ -354,7 +406,8 @@
       "basis": [],
       "rationale": "因果解释需要输入之外的识别论证，当前示例不作有效性判断。",
       "review": "unreviewed",
-      "note": ""
+      "note": "",
+      "rationale_en": "A causal interpretation requires identification arguments outside the supplied text. This example does not judge their validity."
     }
   ],
   "revisions": []

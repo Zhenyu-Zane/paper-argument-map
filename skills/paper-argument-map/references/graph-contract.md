@@ -49,3 +49,12 @@ Each basis entry contains `passage_id` and a nonempty `quote` that is an exact s
 Review states: `unreviewed`, `accepted`, `excluded`. They record a reader's assessment of the reconstruction, not scientific validity. Excluding a node hides its incident edges, while retaining the original edge review states and data. UI edits append `{timestamp, item_id, before, after}` to `revisions`; export is explicit, and no server receives the report. Imported JSON is validated before rendering.
 
 Structural checks: IDs, required fields, types, endpoint validity, quote existence, allowed labels, and joint-premise structure. Warnings: no nodes, cycles (including motivation/response cycles), unsupported input items, inferred items, isolated nodes, and core-view omissions. Cycles are preserved. Neither cycle warnings nor a clean validator result establish a scientific reasoning flaw or correctness.
+
+## Optional display fields (reader v0.2, schema still 0.1)
+
+- Nodes may include `summary` for the short statement shown on the map. `label` retains the complete statement. Summaries must preserve attribution and material qualifications.
+- Nodes may include `label_en`, `label_zh`, `summary_en`, `summary_zh`; nodes and edges may include `rationale_en` and `rationale_zh`. These are human/assistant translations, never new evidence. Every present display field must be a string.
+- Analysis may include `reading_title`, `reading_title_en`, `reading_title_zh`, and translated `input_scope` / `notice` fields with `_en` or `_zh` suffixes.
+- Unsuffixed fields use `analysis.language`. Missing translations fall back to existing text; the reader does not invent translations. Review both languages after an edit. Quotations and source passages remain unchanged.
+- `reader_preferences` optionally stores `language` (`zh` or `en`) and `mode` (`core` or `full`) for export/reopen. It carries no scientific meaning.
+- A core view typically contains 5–7 nodes. Hide secondary context by setting `core: false`; never delete an existing relation or evidence just to simplify the view. Phones stack the same selected nodes in a reading column and preserve actual links, including back-links.

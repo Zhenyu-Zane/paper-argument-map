@@ -1,57 +1,6 @@
-<!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title><!--TITLE--> · Paper Argument Map</title>
-  <style>/*STYLE*/</style>
-</head>
-<body>
-  <header class="topbar">
-    <div class="brand"><span class="brand-icon" aria-hidden="true">↗</span><div>Paper Argument Map<small>读懂一篇论文的推理路径</small></div><span class="version">0.1</span></div>
-    <div class="actions"><label class="button" for="import-file">导入图谱<input id="import-file" type="file" accept=".json,application/json" hidden></label><button id="export-json">导出修订 JSON</button><button id="export-html" class="primary">保存阅读报告</button></div>
-  </header>
-  <section class="paper-head">
-    <div class="eyebrow">SOURCE-GROUNDED READING <span id="source-kind"></span></div>
-    <h1 id="paper-title"></h1>
-    <div id="paper-meta" class="muted"></div>
-    <div class="scope-line"><span id="input-scope"></span><a id="paper-link" target="_blank" rel="noopener noreferrer">查看论文 ↗</a></div>
-    <p id="notice"></p>
-  </section>
-  <main>
-    <section class="source-panel panel" aria-label="论文原文">
-      <div class="panel-heading"><h2>论文原文 <span id="passage-count"></span></h2><button id="clear-source" class="quiet">清除高亮</button></div>
-      <label class="search-label"><span>查找原文</span><input id="source-search" type="search" placeholder="搜索词句或段落编号…"></label>
-      <div id="passages" class="passages"></div>
-      <footer id="attribution"></footer>
-    </section>
-    <section class="map-panel panel" aria-label="论证图与解读">
-      <div class="panel-heading map-heading"><h2>研究逻辑 <span id="graph-count"></span></h2><span id="dirty-state" role="status">尚无未导出的修改</span></div>
-      <div class="toolbar">
-        <div class="segmented" role="group" aria-label="显示方式"><button id="view-map" aria-pressed="true">逻辑图</button><button id="view-outline" aria-pressed="false">文字提纲</button></div>
-        <label><input type="checkbox" id="all-nodes"> 展开全部节点</label>
-        <label><input type="checkbox" id="show-excluded"> 显示已排除</label>
-        <button id="focus-chain" disabled>只看相关路径</button><button id="reset-view" class="quiet">重置</button>
-      </div>
-      <div class="legend"><span><i class="dot explicit"></i>原文明示</span><span><i class="dot inferred"></i>推断连接</span><span><i class="dot not_in_input"></i>当前输入未交代</span><span class="legend-hint">箭头表示论证关系，非变量因果关系</span></div>
-      <div id="warnings" class="warnings" aria-live="polite"></div>
-      <div id="map-container" class="map-container"><svg id="graph" xmlns="http://www.w3.org/2000/svg" aria-label="可交互论证图"></svg></div>
-      <div id="outline" class="outline" hidden></div>
-      <section id="detail" class="detail" aria-label="选中项目详情" aria-live="polite"><div class="empty-detail"><span>01</span><h3>从一个问题开始，沿着依据读下去</h3><p>点击节点查看它说了什么；点击箭头检查两项主张为什么相连。原文将同步高亮。</p></div></section>
-    </section>
-  </main>
-  <div id="toast" role="status" aria-live="polite"></div>
-  <dialog id="edit-dialog">
-    <form id="edit-form"><h2>修订解读</h2><p class="muted">保留原文依据与修订记录。接受某项解读不代表其科学结论已获验证。</p>
-      <label id="label-field">节点表述<textarea id="edit-label" rows="3" maxlength="1000"></textarea></label>
-      <label>解读状态<select id="edit-status"><option value="explicit">原文明示</option><option value="inferred">模型／读者推断</option><option value="not_in_input">当前输入未交代</option></select></label>
-      <label>推断理由或待核对问题<textarea id="edit-rationale" rows="3"></textarea></label>
-      <label>我的笔记<textarea id="edit-note" rows="3"></textarea></label>
-      <p id="edit-error" class="error" role="alert"></p>
-      <div class="dialog-actions"><button type="button" id="cancel-edit">取消</button><button type="submit" class="primary">保存修订</button></div>
-    </form>
-  </dialog>
-  <script id="argument-data" type="application/json">/*DATA*/</script>
-  <script>/*APP*/</script>
-</body>
-</html>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title><!--TITLE--></title><style>/*STYLE*/</style></head><body>
+<header class="topbar"><a class="brand" href="#" id="home-view">Paper Argument Map <small>02</small></a><div class="header-actions"><div class="languages" aria-label="Language"><button id="lang-zh" lang="zh-CN">中文</button><button id="lang-en" lang="en">EN</button></div><details id="more-menu"><summary data-i18n="more">更多</summary><div class="menu"><button id="show-source" data-i18n="original"></button><button id="view-outline" data-i18n="outline"></button><button id="export-svg" data-i18n="exportSVG"></button><button id="export-html" data-i18n="exportHTML"></button><button id="export-json" data-i18n="exportJSON"></button><label class="import-label"><span data-i18n="importJSON"></span><input id="import-file" type="file" accept=".json,application/json"></label><label><input type="checkbox" id="show-excluded"><span data-i18n="excluded"></span></label></div></details></div></header>
+<section class="paper-head"><div class="eyebrow" data-i18n="eyebrow"></div><h1 id="reading-title"></h1><details id="paper-info"><summary><span id="paper-meta"></span><span class="info-label" data-i18n="scope"></span></summary><div class="paper-info-body"><p id="paper-title"></p><p id="source-kind"></p><p id="input-scope"></p><p id="notice"></p><a id="paper-link" target="_blank" rel="noopener noreferrer" data-i18n="paperLink"></a><div id="warnings"></div></div></details></section>
+<main id="reader-shell"><section class="map-panel"><div class="map-toolbar"><div class="view-tabs"><button id="view-map" data-i18n="main"></button><button id="view-full" data-i18n="full"></button></div><div class="map-tools"><button id="focus-chain" hidden data-i18n="focus"></button><button id="fit-view" data-i18n="fit"></button><button id="zoom-out" aria-label="Zoom out">−</button><span id="zoom-label"></span><button id="zoom-in" aria-label="Zoom in">+</button></div></div><div id="map-container"><svg id="graph" xmlns="http://www.w3.org/2000/svg" role="group"></svg></div><div id="outline" hidden></div><div class="map-caption"><span id="graph-count"></span><span data-i18n="mapHint"></span><span id="dirty-state"></span></div></section><aside id="inspector" hidden><div class="inspector-heading"><button id="tab-detail" data-i18n="evidence"></button><button id="tab-source" data-i18n="original"></button><button id="close-inspector" aria-label="Close">×</button></div><div id="detail"></div><div id="source-panel" hidden><input id="source-search" type="search"><div id="passages"></div><p id="attribution"></p></div></aside></main>
+<div id="toast" role="status"></div><dialog id="edit-dialog"><form id="edit-form"><h2 data-i18n="edit"></h2><label id="summary-field"><span data-i18n="shortLabel"></span><textarea id="edit-summary" rows="2"></textarea></label><label id="label-field"><span data-i18n="fullLabel"></span><textarea id="edit-label" rows="3"></textarea></label><label><span data-i18n="statusLabel"></span><select id="edit-status"><option value="explicit" data-i18n="explicit"></option><option value="inferred" data-i18n="inferred"></option><option value="not_in_input" data-i18n="not_in_input"></option></select></label><label><span data-i18n="reason"></span><textarea id="edit-rationale" rows="3"></textarea></label><label><span data-i18n="notes"></span><textarea id="edit-note" rows="2"></textarea></label><p id="edit-error" role="alert"></p><div class="detail-actions"><button id="cancel-edit" type="button" data-i18n="cancel"></button><button type="submit" data-i18n="save"></button></div></form></dialog>
+<script type="application/json" id="argument-data">/*DATA*/</script><script>/*LAYOUT*/</script><script>/*APP*/</script></body></html>
