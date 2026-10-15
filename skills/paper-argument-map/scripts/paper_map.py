@@ -50,11 +50,11 @@ def validate(data):
     passages, nodes, edges = (lists[k] for k in ('passages', 'nodes', 'edges'))
     for obj in [analysis] + nodes + edges:
         for key, value in obj.items():
-            if key in {'summary', 'reading_title'} or key.endswith(('_en', '_zh')):
+            if key in {'summary', 'reading_title', 'caption', 'plain_label', 'plain_summary', 'plain_rationale', 'plain_caption'} or key.endswith(('_en', '_zh')):
                 if not isinstance(value, str):
                     errors.append(f'{key} must be text.')
     prefs = data.get('reader_preferences', {})
-    if not isinstance(prefs, dict) or prefs.get('language', 'zh') not in ('zh', 'en') or prefs.get('mode', 'core') not in ('core', 'full'):
+    if not isinstance(prefs, dict) or prefs.get('language', 'zh') not in ('zh', 'en') or prefs.get('mode', 'core') not in ('core', 'full') or prefs.get('reading_level', 'plain') not in ('plain', 'technical'):
         errors.append('reader_preferences must contain a supported language and mode.')
     if len(nodes) > 300 or len(edges) > 1500:
         errors.append('Reader supports at most 300 nodes and 1500 edges; split large graphs.')
@@ -160,7 +160,41 @@ def validate(data):
     return errors, warnings
 
 
-def render(data):
+def audit_readability(data):
+    """Check presentation completeness, not semantic correctness or reader comprehension."""
+    errors, _ = validate(data)
+    if errors:
+        return errors
+    for item in data['nodes']:
+        for language in ('en', 'zh'):
+            for key in ('plain_label', 'plain_summary'):
+                if not isinstance(item.get(f'{key}_{language}'), str) or not item[f'{key}_{language}'].strip():
+                    errors.append(f'{item["id"]}: missing {key}_{language}.')
+            original = item.get(f'label_{language}') or (item.get('label') if data['analysis']['language'].startswith(language) else None)
+            if not original:
+                errors.append(f'{item["id"]}: missing technical wording in {language}.')
+    for item in data['edges']:
+        for language in ('en', 'zh'):
+            for key in ('caption', 'plain_caption'):
+                if not isinstance(item.get(f'{key}_{language}'), str) or not item[f'{key}_{language}'].strip():
+                    errors.append(f'{item["id"]}: missing {key}_{language}.')
+    review = data['analysis'].get('readability_review')
+    if not isinstance(review, dict):
+        errors.append('Missing analysis.readability_review; perform the cold-reader review.')
+    else:
+        if not isinstance(review.get('reviewer'), str) or not review['reviewer'].strip():
+            errors.append('readability_review.reviewer must identify who performed the review.')
+        answers = review.get('answers', {})
+        for key in ('why', 'unknown', 'how', 'result', 'limits'):
+            if not isinstance(answers, dict) or not isinstance(answers.get(key), str) or not answers[key].strip():
+                errors.append(f'readability_review.answers.{key} is missing.')
+        for key in ('changes', 'unresolved'):
+            if not isinstance(review.get(key), list) or any(not isinstance(x, str) for x in review[key]):
+                errors.append(f'readability_review.{key} must be a list of text entries.')
+    return errors
+
+
+def render(data, home_url=""):
     errors, warnings = validate(data)
     if errors:
         raise ValueError('\n'.join(errors))
@@ -172,7 +206,7 @@ def render(data):
     layout = (ASSETS / 'vendor/dagre.min.js').read_text(encoding='utf-8')
     licenses = (ASSETS / 'vendor/DAGRE-LICENSE.txt').read_text(encoding='utf-8') + '\n' + (ASSETS / 'vendor/dagre.min.js.LEGAL.txt').read_text(encoding='utf-8')
     layout = '/*\n' + licenses.replace('*/', '* /') + '\n*/\n' + layout
-    return template.replace('<!--TITLE-->', html.escape(data['paper']['title'])).replace('/*STYLE*/', (ASSETS / 'reader.css').read_text(encoding='utf-8')).replace('/*LAYOUT*/', layout).replace('/*APP*/', (ASSETS / 'reader.js').read_text(encoding='utf-8')).replace('/*DATA*/', payload)
+    return template.replace('<!--HOME-->', html.escape(home_url, quote=True)).replace('<!--TITLE-->', html.escape(data['paper']['title'])).replace('/*STYLE*/', (ASSETS / 'reader.css').read_text(encoding='utf-8')).replace('/*LAYOUT*/', layout).replace('/*ROUTING*/', (ASSETS / 'graph-layout.js').read_text(encoding='utf-8')).replace('/*APP*/', (ASSETS / 'reader.js').read_text(encoding='utf-8')).replace('/*DATA*/', payload)
 
 
 def main(argv=None):
@@ -182,13 +216,14 @@ def main(argv=None):
     prep.add_argument('input', type=Path)
     prep.add_argument('--title', required=True)
     prep.add_argument('--out', required=True, type=Path)
-    prep.add_argument('--language', default='zh')
+    prep.add_argument('--language', default='en')
     prep.add_argument('--scope', default='User-provided text')
-    for command in ('validate', 'render'):
+    for command in ('validate', 'audit', 'render'):
         sub = subs.add_parser(command)
         sub.add_argument('input', type=Path)
         if command == 'render':
             sub.add_argument('--out', required=True, type=Path)
+            sub.add_argument('--home', default='', help='Optional relative homepage URL; otherwise use the embedded landing view.')
     args = parser.parse_args(argv)
     try:
         if args.command == 'prepare':
@@ -206,6 +241,8 @@ def main(argv=None):
             return 0
         data = json.loads(args.input.read_text(encoding='utf-8-sig'))
         errors, warnings = validate(data)
+        if not errors and args.command == 'audit':
+            errors = audit_readability(data)
         for message in errors:
             print('ERROR: ' + message, file=sys.stderr)
         for message in warnings:
@@ -214,8 +251,10 @@ def main(argv=None):
             return 1
         if args.command == 'render':
             args.out.parent.mkdir(parents=True, exist_ok=True)
-            args.out.write_text(render(data), encoding='utf-8')
+            args.out.write_text(render(data, home_url=args.home), encoding='utf-8')
             print(f'Rendered: {args.out}')
+        elif args.command == 'audit':
+            print('Bilingual wording, relation captions and self-review record are present. Semantic accuracy and human comprehension are not automatically verified.')
         else:
             print(f'Valid structure and source spans: {len(data["nodes"])} nodes, {len(data["edges"])} edges. Semantic correctness is not checked.')
         return 0

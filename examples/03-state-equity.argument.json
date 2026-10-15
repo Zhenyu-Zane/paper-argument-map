@@ -17,7 +17,30 @@
     "reading_title": "国资参股为何可能缓解民企融资约束？",
     "reading_title_en": "How might state equity ease private firms’ financing constraints?",
     "input_scope_en": "Abstract and Introduction only; excludes the bodies of Methods, Results and appendices.",
-    "notice_en": "Assistant-assisted reconstruction from the abstract and introduction. Original quotations are preserved. Reported findings and literature positioning have not been independently verified; this is not an expert-labeled benchmark."
+    "notice_en": "Assistant-assisted reconstruction from the abstract and introduction. Original quotations are preserved. Reported findings and literature positioning have not been independently verified; this is not an expert-labeled benchmark.",
+    "plain_reading_title_zh": "国资持股为何可能让民企更容易获得资金？",
+    "plain_reading_title_en": "How might state ownership help private firms obtain funding?",
+    "readability_review": {
+      "reviewer": "Assistant self-review; not an independent expert or human comprehension study",
+      "answers": {
+        "why": "Private firms face funding problems that can limit growth and innovation.",
+        "unknown": "Whether reduced competitive pressure helps explain the connection between state equity participation and easier financing.",
+        "how": "The study combines World Bank private-firm surveys and listed firms from 2009–2020.",
+        "result": "The author reports financing relief with state participation and attributes it to lower competitive pressure; the contribution adds this explanation and evidence on smaller private firms.",
+        "limits": "Selection into state participation still needs checking beyond the supplied abstract/introduction. Heterogeneous effects do not establish equal benefits for every firm."
+      },
+      "changes": [
+        "Restored prior context and a consequential interpretation boundary to the main view instead of enforcing six nodes.",
+        "Added explanatory captions to every desktop relation; kept source IDs, relation types and source quotations unchanged.",
+        "Rewrote plain-language labels as concrete statements while retaining reported-versus-verified attribution.",
+        "Compared both wording levels and languages; expanded or explained terms where the original professional summary was opaque.",
+        "Included selection/common-cause and reverse-direction questions where relevant; avoided interpreting absent detail as absent evidence in the full paper."
+      ],
+      "unresolved": [
+        "Only abstract and introduction were supplied; methods, results and identification checks have not been independently reviewed.",
+        "Comprehension has not been tested with human readers."
+      ]
+    }
   },
   "passages": [
     {
@@ -82,14 +105,18 @@
       "summary": "融资困难限制民企发展与创新",
       "label_en": "Private firms continue to face financing difficulties that affect development and innovation.",
       "summary_en": "Financing difficulties constrain private firms",
-      "rationale_en": ""
+      "rationale_en": "",
+      "plain_label_zh": "民营企业往往难以获得足够资金，这会限制发展和创新。",
+      "plain_summary_zh": "民营企业往往难以获得足够资金，这会限制发展和创新。",
+      "plain_label_en": "Private firms often struggle to obtain enough funding, limiting their growth and innovation.",
+      "plain_summary_en": "Private firms often struggle to obtain enough funding, limiting their growth and innovation."
     },
     {
       "id": "N2",
       "role": "prior",
       "label": "作者提出：竞争压力会提高企业投资与外部融资需求。",
       "status": "explicit",
-      "core": false,
+      "core": true,
       "basis": [
         {
           "passage_id": "P3",
@@ -102,7 +129,11 @@
       "summary": "竞争压力提高投资与外部融资需求",
       "label_en": "The authors propose that competitive pressure increases investment and external financing needs.",
       "summary_en": "Competition raises investment and funding needs",
-      "rationale_en": ""
+      "rationale_en": "",
+      "plain_label_zh": "作者认为，竞争越激烈，企业越需要投资，也越需要外部资金。",
+      "plain_summary_zh": "作者认为，竞争越激烈，企业越需要投资，也越需要外部资金。",
+      "plain_label_en": "The author argues that stronger competition increases firms’ need to invest and obtain outside funding.",
+      "plain_summary_en": "The author argues that stronger competition increases firms’ need to invest and obtain outside funding."
     },
     {
       "id": "N3",
@@ -130,7 +161,11 @@
       "summary": "非上市企业证据与竞争机制仍待补充",
       "label_en": "The authors identify gaps concerning unlisted firms, the competition mechanism and the effects of state equity participation.",
       "summary_en": "Evidence on unlisted firms and the competition mechanism is incomplete",
-      "rationale_en": ""
+      "rationale_en": "",
+      "plain_label_zh": "作者认为，非上市民企以及竞争压力这条解释路径，研究还不充分。",
+      "plain_summary_zh": "作者认为，非上市民企以及竞争压力这条解释路径，研究还不充分。",
+      "plain_label_en": "The author identifies limited evidence on unlisted private firms and on the role of competitive pressure.",
+      "plain_summary_en": "The author identifies limited evidence on unlisted private firms and on the role of competitive pressure."
     },
     {
       "id": "N4",
@@ -150,7 +185,11 @@
       "summary": "国资参股能否通过减轻竞争压力缓解融资约束？",
       "label_en": "Can state equity ease private firms’ financing constraints, and what role does competitive pressure play?",
       "summary_en": "Can reduced competitive pressure link state equity to easier financing?",
-      "rationale_en": ""
+      "rationale_en": "",
+      "plain_label_zh": "国资持股是否能减轻竞争压力，让民企更容易获得资金？",
+      "plain_summary_zh": "国资持股是否能减轻竞争压力，让民企更容易获得资金？",
+      "plain_label_en": "Could state ownership ease competitive pressure and help private firms obtain funding?",
+      "plain_summary_en": "Could state ownership ease competitive pressure and help private firms obtain funding?"
     },
     {
       "id": "N5",
@@ -170,7 +209,11 @@
       "summary": "世界银行民企调查；与 2009—2020 年上市企业样本",
       "label_en": "The study combines World Bank surveys of private firms with a sample of listed firms in 2009–2020.",
       "summary_en": "World Bank private-firm surveys and listed firms, 2009–2020",
-      "rationale_en": ""
+      "rationale_en": "",
+      "plain_label_zh": "结合世界银行民企调查和 2009—2020 年上市企业数据，检验这条解释路径。",
+      "plain_summary_zh": "结合世界银行民企调查和 2009—2020 年上市企业数据，检验这条解释路径。",
+      "plain_label_en": "Combine World Bank surveys of private firms with listed-firm data from 2009–2020 to test this explanation.",
+      "plain_summary_en": "Combine World Bank surveys of private firms with listed-firm data from 2009–2020 to test this explanation."
     },
     {
       "id": "N6",
@@ -190,7 +233,11 @@
       "summary": "作者报告：国资参与缓解融资约束，并归因于竞争压力减轻",
       "label_en": "The abstract reports that state participation eases financing constraints; the authors attribute this to reduced competitive pressure.",
       "summary_en": "Reported financing relief is attributed to reduced competitive pressure",
-      "rationale_en": ""
+      "rationale_en": "",
+      "plain_label_zh": "作者报告：国资持股的企业融资困难较少，并将其解释为竞争压力减轻。",
+      "plain_summary_zh": "作者报告：国资持股的企业融资困难较少，并将其解释为竞争压力减轻。",
+      "plain_label_en": "The author reports fewer funding difficulties with state ownership and attributes this to reduced competitive pressure.",
+      "plain_summary_en": "The author reports fewer funding difficulties with state ownership and attributes this to reduced competitive pressure."
     },
     {
       "id": "N7",
@@ -210,7 +257,11 @@
       "summary": "引入竞争压力机制，补充中小民企证据",
       "label_en": "The claimed contribution is to introduce a competitive-pressure mechanism and add evidence on small and medium-sized private firms.",
       "summary_en": "A competition mechanism and additional evidence on smaller private firms",
-      "rationale_en": ""
+      "rationale_en": "",
+      "plain_label_zh": "作者希望说明竞争压力为何重要，并补充中小民营企业的证据。",
+      "plain_summary_zh": "作者希望说明竞争压力为何重要，并补充中小民营企业的证据。",
+      "plain_label_en": "The claimed contribution is to explain the role of competitive pressure and add evidence on smaller private firms.",
+      "plain_summary_en": "The claimed contribution is to explain the role of competitive pressure and add evidence on smaller private firms."
     },
     {
       "id": "N8",
@@ -230,14 +281,18 @@
       "summary": "新兴、非集团和非上市企业的效果更明显",
       "label_en": "The authors report stronger alleviation effects for emerging, non-group and unlisted firms.",
       "summary_en": "Stronger reported effects for emerging, non-group and unlisted firms",
-      "rationale_en": ""
+      "rationale_en": "",
+      "plain_label_zh": "作者报告：新兴企业、不属于企业集团的企业和非上市企业，融资改善更明显。",
+      "plain_summary_zh": "作者报告：新兴企业、不属于企业集团的企业和非上市企业，融资改善更明显。",
+      "plain_label_en": "The author reports stronger funding relief for emerging firms, firms outside business groups and unlisted firms.",
+      "plain_summary_en": "The author reports stronger funding relief for emerging firms, firms outside business groups and unlisted firms."
     },
     {
       "id": "N9",
       "role": "limitation",
       "label": "待核对：国资进入企业的选择机制如何影响结果解释？",
       "status": "not_in_input",
-      "core": false,
+      "core": true,
       "basis": [],
       "rationale": "所读摘要与引言没有充分说明用于处理国资进入选择性的识别设计；需要进一步阅读方法与稳健性部分。",
       "review": "unreviewed",
@@ -245,7 +300,13 @@
       "summary": "待核对：国资进入的选择机制如何影响解释？",
       "label_en": "To check: how does selection into state equity participation affect interpretation of the results?",
       "summary_en": "How does selection into state participation affect interpretation?",
-      "rationale_en": "The supplied abstract and introduction do not sufficiently explain identification of selection into state participation. Methods and robustness checks need to be examined."
+      "rationale_en": "The supplied abstract and introduction do not sufficiently explain identification of selection into state participation. Methods and robustness checks need to be examined.",
+      "plain_label_zh": "还要核对：国资选择持股哪些企业，会不会本来就影响了融资结果？",
+      "plain_summary_zh": "还要核对：国资选择持股哪些企业，会不会本来就影响了融资结果？",
+      "plain_label_en": "Still to check: could the way firms are selected for state ownership explain their funding outcomes?",
+      "plain_summary_en": "Still to check: could the way firms are selected for state ownership explain their funding outcomes?",
+      "plain_rationale_zh": "这里只读了摘要和引言，还需要查看方法、结果或附录。这个问题没有在当前输入中说清楚，不代表整篇论文没有处理。",
+      "plain_rationale_en": "Only the abstract and introduction were read. The methods, results or appendices still need checking. Missing detail here does not mean the full paper ignores the issue."
     },
     {
       "id": "N10",
@@ -265,7 +326,13 @@
       "summary": "检验普遍性，不等于证明所有企业同等受益",
       "label_en": "Testing universality is a research objective, not evidence that all firms benefit equally.",
       "summary_en": "Testing universality does not establish equal benefits for all firms",
-      "rationale_en": "Preserve the uncertainty implied by “whether” and distinguish the research objective from the reported heterogeneity."
+      "rationale_en": "Preserve the uncertainty implied by “whether” and distinguish the research objective from the reported heterogeneity.",
+      "plain_label_zh": "研究想知道结果能否推广，不代表已经证明所有企业都会同样受益。",
+      "plain_summary_zh": "研究想知道结果能否推广，不代表已经证明所有企业都会同样受益。",
+      "plain_label_en": "Asking whether a result applies broadly does not establish that all firms benefit equally.",
+      "plain_summary_en": "Asking whether a result applies broadly does not establish that all firms benefit equally.",
+      "plain_rationale_zh": "这是读者对结果能说明什么提出的提醒，不是作者在所引原文中明确给出的结论。研究想知道结果能否推广，不代表已经证明所有企业都会同样受益。",
+      "plain_rationale_en": "This is a reader’s caution about what the result can establish, not a conclusion explicitly stated in the quoted passage. Asking whether a result applies broadly does not establish that all firms benefit equally."
     }
   ],
   "edges": [
@@ -284,7 +351,13 @@
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source.",
+      "caption_zh": "说明为什么值得研究",
+      "caption_en": "shows why this matters",
+      "plain_caption_zh": "说明为什么值得研究",
+      "plain_caption_en": "shows why this matters",
+      "plain_rationale_zh": "这条线把前面的研究理由或问题，与后面的提问或检验联系起来。它表示为什么开展这项研究，不表示前一个论点已经证明了后一个论点。",
+      "plain_rationale_en": "This connects a reason or question to the next question or test. It explains why the study is undertaken, rather than showing that one claim proves the other."
     },
     {
       "id": "E2",
@@ -301,7 +374,13 @@
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source.",
+      "caption_zh": "提出竞争压力这条路径",
+      "caption_en": "suggests the competition pathway",
+      "plain_caption_zh": "提出竞争压力这条路径",
+      "plain_caption_en": "suggests the competition pathway",
+      "plain_rationale_zh": "这条线把前面的研究理由或问题，与后面的提问或检验联系起来。它表示为什么开展这项研究，不表示前一个论点已经证明了后一个论点。",
+      "plain_rationale_en": "This connects a reason or question to the next question or test. It explains why the study is undertaken, rather than showing that one claim proves the other."
     },
     {
       "id": "E3",
@@ -318,7 +397,13 @@
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source.",
+      "caption_zh": "明确尚未回答的问题",
+      "caption_en": "defines what is still unknown",
+      "plain_caption_zh": "明确尚未回答的问题",
+      "plain_caption_en": "defines what is still unknown",
+      "plain_rationale_zh": "这条线把前面的研究理由或问题，与后面的提问或检验联系起来。它表示为什么开展这项研究，不表示前一个论点已经证明了后一个论点。",
+      "plain_rationale_en": "This connects a reason or question to the next question or test. It explains why the study is undertaken, rather than showing that one claim proves the other."
     },
     {
       "id": "E4",
@@ -335,7 +420,13 @@
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source.",
+      "caption_zh": "用两组数据检验",
+      "caption_en": "tested using two datasets",
+      "plain_caption_zh": "用两组数据检验",
+      "plain_caption_en": "tested using two datasets",
+      "plain_rationale_zh": "这条线把前面的研究理由或问题，与后面的提问或检验联系起来。它表示为什么开展这项研究，不表示前一个论点已经证明了后一个论点。",
+      "plain_rationale_en": "This connects a reason or question to the next question or test. It explains why the study is undertaken, rather than showing that one claim proves the other."
     },
     {
       "id": "E5",
@@ -352,7 +443,13 @@
       "rationale": "摘要对研究结果的报告，不是对原始数据的复核。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "A report of results in the abstract, not a reanalysis of the original data."
+      "rationale_en": "A report of results in the abstract, not a reanalysis of the original data.",
+      "caption_zh": "作者报告这一结果",
+      "caption_en": "author reports this pattern",
+      "plain_caption_zh": "作者报告这一结果",
+      "plain_caption_en": "author reports this pattern",
+      "plain_rationale_zh": "这条线表示作者用上述研究设计报告了这一结果。这里尚未独立核对数据、结果表格或因果解释。",
+      "plain_rationale_en": "This connects the study to a result the authors report. The data, result tables and causal interpretation have not been independently checked here."
     },
     {
       "id": "E6",
@@ -369,7 +466,13 @@
       "rationale": "作者在摘要中报告异质性。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "The author reports heterogeneity in the abstract."
+      "rationale_en": "The author reports heterogeneity in the abstract.",
+      "caption_zh": "还报告了差异",
+      "caption_en": "also reports differences",
+      "plain_caption_zh": "还报告了差异",
+      "plain_caption_en": "also reports differences",
+      "plain_rationale_zh": "这条线表示作者用上述研究设计报告了这一结果。这里尚未独立核对数据、结果表格或因果解释。",
+      "plain_rationale_en": "This connects the study to a result the authors report. The data, result tables and causal interpretation have not been independently checked here."
     },
     {
       "id": "E7",
@@ -386,7 +489,13 @@
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source.",
+      "caption_zh": "据此提出贡献主张",
+      "caption_en": "basis for the claimed contribution",
+      "plain_caption_zh": "据此提出贡献主张",
+      "plain_caption_en": "basis for the claimed contribution",
+      "plain_rationale_zh": "读者据此重建：作者把报告的结果作为贡献主张的依据。这不表示读者已经验证结果或贡献。",
+      "plain_rationale_en": "The reader reconstructs this link: the authors use the reported result as a basis for their contribution claim. Neither the result nor the contribution has been independently verified here."
     },
     {
       "id": "E8",
@@ -398,7 +507,13 @@
       "rationale": "当前输入未展开识别设计，不能据摘要措辞判断因果识别是否成立。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "The supplied text does not elaborate identification; wording in the abstract cannot establish whether causal identification holds."
+      "rationale_en": "The supplied text does not elaborate identification; wording in the abstract cannot establish whether causal identification holds.",
+      "caption_zh": "需要排除选择差异",
+      "caption_en": "selection differences need checking",
+      "plain_caption_zh": "需要排除选择差异",
+      "plain_caption_en": "selection differences need checking",
+      "plain_rationale_zh": "还要核对：国资选择持股哪些企业，会不会本来就影响了融资结果？ 这限制了对后一个论点的理解。",
+      "plain_rationale_en": "Still to check: could the way firms are selected for state ownership explain their funding outcomes? This limits how the following claim should be read."
     },
     {
       "id": "E9",
@@ -415,8 +530,19 @@
       "rationale": "区别检验目标与已建立的普遍性结论。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "Distinguishes the objective of testing universality from an established universal conclusion."
+      "rationale_en": "Distinguishes the objective of testing universality from an established universal conclusion.",
+      "caption_zh": "不能直接推广到所有企业",
+      "caption_en": "does not establish universal benefits",
+      "plain_caption_zh": "不能直接推广到所有企业",
+      "plain_caption_en": "does not establish universal benefits",
+      "plain_rationale_zh": "研究想知道结果能否推广，不代表已经证明所有企业都会同样受益。 这限制了对后一个论点的理解。",
+      "plain_rationale_en": "Asking whether a result applies broadly does not establish that all firms benefit equally. This limits how the following claim should be read."
     }
   ],
-  "revisions": []
+  "revisions": [],
+  "reader_preferences": {
+    "language": "en",
+    "reading_level": "plain",
+    "mode": "core"
+  }
 }

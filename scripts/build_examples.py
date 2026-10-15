@@ -18,11 +18,11 @@ def main():
     for index,source in enumerate(sorted((ROOT/'examples').glob('*.argument.json')),1):
         data=json.loads(source.read_text(encoding='utf-8'))
         name=source.name.removesuffix('.argument.json')
-        (args.out/(name+'.html')).write_text(pm.render(data),encoding='utf-8')
+        (args.out/(name+'.html')).write_text(pm.render(data, home_url="index.html"),encoding='utf-8')
         (args.out/source.name).write_bytes(source.read_bytes())
         p=data['paper']
-        zh=html.escape(data['analysis'].get('reading_title',p['title']),quote=True)
-        en=html.escape(data['analysis'].get('reading_title_en',p['title']),quote=True)
+        zh=html.escape(data['analysis'].get('plain_reading_title_zh',data['analysis'].get('reading_title',p['title'])),quote=True)
+        en=html.escape(data['analysis'].get('plain_reading_title_en',data['analysis'].get('reading_title_en',p['title'])),quote=True)
         cards.append(f'<a class="card" data-file="{html.escape(name)}.html" href="{html.escape(name)}.html"><span>0{index}</span><div><h2 data-zh="{zh}" data-en="{en}"></h2><p>{html.escape(p["authors"])} · {html.escape(str(p.get("year","")))}</p></div><b>↗</b></a>')
     index=(ROOT/'scripts/gallery.html').read_text(encoding='utf-8').replace('<!--CARDS-->',''.join(cards))
     (args.out/'index.html').write_text(index,encoding='utf-8')

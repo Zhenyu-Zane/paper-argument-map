@@ -1,0 +1,11 @@
+/* Homepage navigation and final delivered reports; run build_examples.py first. */
+const fs=require('node:fs'),path=require('node:path'),{pathToFileURL}=require('node:url'),assert=require('node:assert/strict'),{chromium}=require('playwright');
+(async()=>{const browser=await chromium.launch({headless:true,...(process.env.PLAYWRIGHT_CHANNEL?{channel:process.env.PLAYWRIGHT_CHANNEL}:{})});try{
+const page=await browser.newPage({viewport:{width:1440,height:1100}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
+await page.goto(pathToFileURL(path.resolve(__dirname,'../outputs/index.html')).href);assert.equal(await page.locator('html').getAttribute('lang'),'en');assert.equal(await page.locator('.card').count(),3);
+await page.locator('.card').first().click();assert.equal(await page.locator('html').getAttribute('lang'),'en');assert.equal(await page.locator('#level-plain').getAttribute('aria-pressed'),'true');assert.equal(await page.locator('.graph-node').count(),8);
+await page.screenshot({path:path.resolve(__dirname,'../outputs/reader-preview.png'),fullPage:true});
+await page.locator('#lang-zh').click();await page.screenshot({path:path.resolve(__dirname,'../outputs/reader-preview-zh.png'),fullPage:true});await page.locator('#home-view').click();await page.waitForURL(/index\.html\?lang=zh$/);assert.equal(await page.locator('.card').count(),3);assert.equal(await page.locator('html').getAttribute('lang'),'zh-CN');
+await page.locator('#en').click();await page.locator('.card').nth(1).click();assert.equal(await page.locator('html').getAttribute('lang'),'en');await page.locator('#view-full').click();await page.screenshot({path:path.resolve(__dirname,'../outputs/reader-detail-preview.png'),fullPage:true});await page.locator('#home-view').click();await page.waitForURL(/index\.html\?lang=en$/);
+await page.locator('.card').nth(2).click();await page.locator('#level-technical').click();await page.screenshot({path:path.resolve(__dirname,'../outputs/reader-technical-preview.png'),fullPage:true});assert.deepEqual(errors,[]);console.log('PASS: English/plain defaults, real homepage navigation in both languages, all gallery links, final delivered screenshots.');
+}finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

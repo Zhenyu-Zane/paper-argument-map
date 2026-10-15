@@ -17,7 +17,30 @@
     "reading_title": "数字金融如何影响中小企业创新？",
     "reading_title_en": "How might digital finance support SME innovation?",
     "input_scope_en": "Abstract and Introduction only; excludes the bodies of Methods, Results and appendices.",
-    "notice_en": "Assistant-assisted reconstruction from the abstract and introduction. Original quotations are preserved. Reported findings and literature positioning have not been independently verified; this is not an expert-labeled benchmark."
+    "notice_en": "Assistant-assisted reconstruction from the abstract and introduction. Original quotations are preserved. Reported findings and literature positioning have not been independently verified; this is not an expert-labeled benchmark.",
+    "plain_reading_title_zh": "数字金融能否帮助小企业创新？",
+    "plain_reading_title_en": "Can digital finance help small firms innovate?",
+    "readability_review": {
+      "reviewer": "Assistant self-review; not an independent expert or human comprehension study",
+      "answers": {
+        "why": "Small firms need stable funding for innovation but face funding difficulties.",
+        "unknown": "Whether easier access to funding explains the connection between digital finance and innovation.",
+        "how": "The authors match 2011–2020 Chinese GEM firm data to a digital-finance index and use fixed-effects and mediation models.",
+        "result": "The abstract reports a positive innovation link, interpreted through eased funding constraints; this is the basis of the claimed mechanism contribution.",
+        "limits": "Common causes and reverse causality still need checking in sections beyond this input. The reported findings are not independently verified."
+      },
+      "changes": [
+        "Restored prior context and a consequential interpretation boundary to the main view instead of enforcing six nodes.",
+        "Added explanatory captions to every desktop relation; kept source IDs, relation types and source quotations unchanged.",
+        "Rewrote plain-language labels as concrete statements while retaining reported-versus-verified attribution.",
+        "Compared both wording levels and languages; expanded or explained terms where the original professional summary was opaque.",
+        "Included selection/common-cause and reverse-direction questions where relevant; avoided interpreting absent detail as absent evidence in the full paper."
+      ],
+      "unresolved": [
+        "Only abstract and introduction were supplied; methods, results and identification checks have not been independently reviewed.",
+        "Comprehension has not been tested with human readers."
+      ]
+    }
   },
   "passages": [
     {
@@ -92,14 +115,18 @@
       "summary": "创新需要稳定资金，但中小企业融资困难",
       "label_en": "Innovation needs stable funding, yet SMEs face financing constraints.",
       "summary_en": "SME innovation faces a funding gap",
-      "rationale_en": ""
+      "rationale_en": "",
+      "plain_label_zh": "小企业做创新需要持续投入资金，但往往借不到足够的钱。",
+      "plain_summary_zh": "小企业做创新需要持续投入资金，但往往借不到足够的钱。",
+      "plain_label_en": "Small firms need steady funding to innovate, but often struggle to obtain it.",
+      "plain_summary_en": "Small firms need steady funding to innovate, but often struggle to obtain it."
     },
     {
       "id": "N2",
       "role": "prior",
       "label": "作者回顾：数字金融可能拓宽中小企业融资渠道。",
       "status": "explicit",
-      "core": false,
+      "core": true,
       "basis": [
         {
           "passage_id": "P2",
@@ -112,7 +139,11 @@
       "summary": "数字金融可能拓宽融资渠道",
       "label_en": "The authors review how digital finance may expand SME financing channels.",
       "summary_en": "Digital finance may widen access to funding",
-      "rationale_en": ""
+      "rationale_en": "",
+      "plain_label_zh": "已有研究认为，数字金融可能让小企业更容易获得资金。",
+      "plain_summary_zh": "已有研究认为，数字金融可能让小企业更容易获得资金。",
+      "plain_label_en": "The authors cite research suggesting that digital finance may give small firms more ways to obtain funding.",
+      "plain_summary_en": "The authors cite research suggesting that digital finance may give small firms more ways to obtain funding."
     },
     {
       "id": "N3",
@@ -132,7 +163,11 @@
       "summary": "融资约束的中介路径仍待探索",
       "label_en": "The authors identify a gap in research on the indirect path from digital finance to innovation through financing constraints.",
       "summary_en": "The financing-constraint pathway is underexplored",
-      "rationale_en": ""
+      "rationale_en": "",
+      "plain_label_zh": "作者认为，资金更容易获得是否能解释创新增加，仍不够清楚。",
+      "plain_summary_zh": "作者认为，资金更容易获得是否能解释创新增加，仍不够清楚。",
+      "plain_label_en": "The authors say it remains unclear whether easier access to funding explains the innovation gains.",
+      "plain_summary_en": "The authors say it remains unclear whether easier access to funding explains the innovation gains."
     },
     {
       "id": "N4",
@@ -152,7 +187,11 @@
       "summary": "数字金融能否通过缓解融资约束促进创新？",
       "label_en": "Can digital finance ease financing constraints and promote firm innovation?",
       "summary_en": "Can easier financing link digital finance to innovation?",
-      "rationale_en": ""
+      "rationale_en": "",
+      "plain_label_zh": "数字金融是否让小企业更容易获得资金，进而增加创新？",
+      "plain_summary_zh": "数字金融是否让小企业更容易获得资金，进而增加创新？",
+      "plain_label_en": "Does digital finance help small firms obtain funding and, through that route, innovate more?",
+      "plain_summary_en": "Does digital finance help small firms obtain funding and, through that route, innovate more?"
     },
     {
       "id": "N5",
@@ -169,10 +208,14 @@
       "rationale": "",
       "review": "unreviewed",
       "note": "",
-      "summary": "创业板企业，2011—2020；固定效应与中介模型",
-      "label_en": "The study matches Chinese GEM-listed firms in 2011–2020 with the digital financial inclusion index and uses fixed-effects and mediation models.",
-      "summary_en": "GEM firms, 2011–2020; fixed-effects and mediation models",
-      "rationale_en": ""
+      "summary": "创业板企业，2011—2020 年；固定效应模型与融资路径的中介检验。",
+      "label_en": "Match Chinese Growth Enterprise Market (GEM) firms in 2011–2020 to the digital financial inclusion index. Use two-way fixed effects and mediation tests to examine the proposed funding pathway.",
+      "summary_en": "GEM firms, 2011–2020; fixed-effects models and mediation tests of the funding pathway.",
+      "rationale_en": "",
+      "plain_label_zh": "比较 2011—2020 年中国创业板企业的数据，检验融资困难能否解释创新的变化。",
+      "plain_summary_zh": "比较 2011—2020 年中国创业板企业的数据，检验融资困难能否解释创新的变化。",
+      "plain_label_en": "Compare Chinese growth-market firms in 2011–2020 and test whether funding difficulties help explain changes in innovation.",
+      "plain_summary_en": "Compare Chinese growth-market firms in 2011–2020 and test whether funding difficulties help explain changes in innovation."
     },
     {
       "id": "N6",
@@ -192,7 +235,11 @@
       "summary": "作者报告：数字金融促进创新，并归因于融资约束缓解",
       "label_en": "The abstract reports that digital finance promotes innovation; the authors interpret this through eased financing constraints.",
       "summary_en": "Reported innovation gains are attributed to eased financing constraints",
-      "rationale_en": ""
+      "rationale_en": "",
+      "plain_label_zh": "作者报告：数字金融发展伴随更多创新，并把这种联系解释为融资困难减轻。",
+      "plain_summary_zh": "作者报告：数字金融发展伴随更多创新，并把这种联系解释为融资困难减轻。",
+      "plain_label_en": "The authors report more innovation with digital finance and interpret easier funding as the explanation.",
+      "plain_summary_en": "The authors report more innovation with digital finance and interpret easier funding as the explanation."
     },
     {
       "id": "N7",
@@ -212,7 +259,11 @@
       "summary": "将融资约束纳入数字金融与创新的解释",
       "label_en": "The claimed contribution is to introduce financing constraints as a mediator in research on digital finance and innovation.",
       "summary_en": "Financing constraints connect digital finance and innovation",
-      "rationale_en": ""
+      "rationale_en": "",
+      "plain_label_zh": "作者希望补充的解释是：数字金融可能通过解决融资难题来支持创新。",
+      "plain_summary_zh": "作者希望补充的解释是：数字金融可能通过解决融资难题来支持创新。",
+      "plain_label_en": "The claimed contribution is an explanation of how digital finance may support innovation by easing funding problems.",
+      "plain_summary_en": "The claimed contribution is an explanation of how digital finance may support innovation by easing funding problems."
     },
     {
       "id": "N8",
@@ -232,14 +283,18 @@
       "summary": "效果随产权性质与地区而不同",
       "label_en": "The authors also report heterogeneity across ownership types and regions.",
       "summary_en": "Reported effects vary by ownership and region",
-      "rationale_en": ""
+      "rationale_en": "",
+      "plain_label_zh": "作者报告，不同所有制和地区的企业，结果并不相同。",
+      "plain_summary_zh": "作者报告，不同所有制和地区的企业，结果并不相同。",
+      "plain_label_en": "The authors report different results across ownership types and regions.",
+      "plain_summary_en": "The authors report different results across ownership types and regions."
     },
     {
       "id": "N9",
       "role": "limitation",
       "label": "待核对：这些模型如何排除共同变化和反向因果？",
       "status": "not_in_input",
-      "core": false,
+      "core": true,
       "basis": [],
       "rationale": "所读摘要与引言说明模型类型，但没有展开识别条件；需要查阅方法、稳健性检验与附录。不能据此断言全文未处理内生性。",
       "review": "unreviewed",
@@ -247,7 +302,13 @@
       "summary": "待核对：共同变化与反向因果如何排除？",
       "label_en": "To check: how do these models rule out common trends and reverse causality?",
       "summary_en": "How are confounding and reverse causality addressed?",
-      "rationale_en": "The abstract and introduction name the models but do not elaborate identification conditions. Methods, robustness checks and appendices must be read; this does not imply the full paper ignores endogeneity."
+      "rationale_en": "The abstract and introduction name the models but do not elaborate identification conditions. Methods, robustness checks and appendices must be read; this does not imply the full paper ignores endogeneity.",
+      "plain_label_zh": "还要核对：会不会是其他因素造成了结果？也可能是创新反过来让企业更容易融资。当前输入未交代如何排除这些解释。",
+      "plain_summary_zh": "还要核对：是其他因素造成了结果，还是创新反过来改善了融资？",
+      "plain_label_en": "Could other factors explain the result, or could innovation itself improve access to finance? The supplied sections do not settle these questions.",
+      "plain_summary_en": "Could other factors—or innovation itself improving access to finance—explain the result?",
+      "plain_rationale_zh": "这里只读了摘要和引言，还需要查看方法、结果或附录。这个问题没有在当前输入中说清楚，不代表整篇论文没有处理。",
+      "plain_rationale_en": "Only the abstract and introduction were read. The methods, results or appendices still need checking. Missing detail here does not mean the full paper ignores the issue."
     },
     {
       "id": "N10",
@@ -267,7 +328,13 @@
       "summary": "模型名称本身不能保证因果识别",
       "label_en": "A causal interpretation requires further identification evidence; fixed-effects or mediation model labels alone do not guarantee it.",
       "summary_en": "Model labels alone do not establish causal identification",
-      "rationale_en": "This is a reader-imposed identification requirement, not an assumption explicitly stated by the authors in the supplied passage."
+      "rationale_en": "This is a reader-imposed identification requirement, not an assumption explicitly stated by the authors in the supplied passage.",
+      "plain_label_zh": "使用这些统计模型，本身不足以证明是数字金融导致了更多创新。",
+      "plain_summary_zh": "使用这些统计模型，本身不足以证明是数字金融导致了更多创新。",
+      "plain_label_en": "Using these statistical models alone does not prove that digital finance caused more innovation.",
+      "plain_summary_en": "Using these statistical models alone does not prove that digital finance caused more innovation.",
+      "plain_rationale_zh": "这是读者对结果能说明什么提出的提醒，不是作者在所引原文中明确给出的结论。使用这些统计模型，本身不足以证明是数字金融导致了更多创新。",
+      "plain_rationale_en": "This is a reader’s caution about what the result can establish, not a conclusion explicitly stated in the quoted passage. Using these statistical models alone does not prove that digital finance caused more innovation."
     }
   ],
   "edges": [
@@ -286,7 +353,13 @@
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source.",
+      "caption_zh": "说明为什么值得研究",
+      "caption_en": "shows why this matters",
+      "plain_caption_zh": "说明为什么值得研究",
+      "plain_caption_en": "shows why this matters",
+      "plain_rationale_zh": "这条线把前面的研究理由或问题，与后面的提问或检验联系起来。它表示为什么开展这项研究，不表示前一个论点已经证明了后一个论点。",
+      "plain_rationale_en": "This connects a reason or question to the next question or test. It explains why the study is undertaken, rather than showing that one claim proves the other."
     },
     {
       "id": "E2",
@@ -303,7 +376,13 @@
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source.",
+      "caption_zh": "提出一种可能的答案",
+      "caption_en": "suggests a possible answer",
+      "plain_caption_zh": "提出一种可能的答案",
+      "plain_caption_en": "suggests a possible answer",
+      "plain_rationale_zh": "这条线把前面的研究理由或问题，与后面的提问或检验联系起来。它表示为什么开展这项研究，不表示前一个论点已经证明了后一个论点。",
+      "plain_rationale_en": "This connects a reason or question to the next question or test. It explains why the study is undertaken, rather than showing that one claim proves the other."
     },
     {
       "id": "E3",
@@ -320,7 +399,13 @@
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source.",
+      "caption_zh": "明确尚未回答的问题",
+      "caption_en": "defines what is still unknown",
+      "plain_caption_zh": "明确尚未回答的问题",
+      "plain_caption_en": "defines what is still unknown",
+      "plain_rationale_zh": "这条线把前面的研究理由或问题，与后面的提问或检验联系起来。它表示为什么开展这项研究，不表示前一个论点已经证明了后一个论点。",
+      "plain_rationale_en": "This connects a reason or question to the next question or test. It explains why the study is undertaken, rather than showing that one claim proves the other."
     },
     {
       "id": "E4",
@@ -337,7 +422,13 @@
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source.",
+      "caption_zh": "用企业数据检验",
+      "caption_en": "tested using firm data",
+      "plain_caption_zh": "用企业数据检验",
+      "plain_caption_en": "tested using firm data",
+      "plain_rationale_zh": "这条线把前面的研究理由或问题，与后面的提问或检验联系起来。它表示为什么开展这项研究，不表示前一个论点已经证明了后一个论点。",
+      "plain_rationale_en": "This connects a reason or question to the next question or test. It explains why the study is undertaken, rather than showing that one claim proves the other."
     },
     {
       "id": "E5",
@@ -354,7 +445,13 @@
       "rationale": "摘要报告研究结果；此关系不表示读者已经核验估计或识别。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "The abstract reports results; this relation does not mean the reader has verified estimation or identification."
+      "rationale_en": "The abstract reports results; this relation does not mean the reader has verified estimation or identification.",
+      "caption_zh": "作者报告这一结果",
+      "caption_en": "authors report this pattern",
+      "plain_caption_zh": "作者报告这一结果",
+      "plain_caption_en": "authors report this pattern",
+      "plain_rationale_zh": "这条线表示作者用上述研究设计报告了这一结果。这里尚未独立核对数据、结果表格或因果解释。",
+      "plain_rationale_en": "This connects the study to a result the authors report. The data, result tables and causal interpretation have not been independently checked here."
     },
     {
       "id": "E6",
@@ -371,7 +468,13 @@
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source.",
+      "caption_zh": "据此提出贡献主张",
+      "caption_en": "basis for the claimed contribution",
+      "plain_caption_zh": "据此提出贡献主张",
+      "plain_caption_en": "basis for the claimed contribution",
+      "plain_rationale_zh": "读者据此重建：作者把报告的结果作为贡献主张的依据。这不表示读者已经验证结果或贡献。",
+      "plain_rationale_en": "The reader reconstructs this link: the authors use the reported result as a basis for their contribution claim. Neither the result nor the contribution has been independently verified here."
     },
     {
       "id": "E7",
@@ -388,7 +491,13 @@
       "rationale": "摘要报告异质性发现。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "The abstract reports heterogeneous findings."
+      "rationale_en": "The abstract reports heterogeneous findings.",
+      "caption_zh": "还报告了差异",
+      "caption_en": "also reports differences",
+      "plain_caption_zh": "还报告了差异",
+      "plain_caption_en": "also reports differences",
+      "plain_rationale_zh": "这条线表示作者用上述研究设计报告了这一结果。这里尚未独立核对数据、结果表格或因果解释。",
+      "plain_rationale_en": "This connects the study to a result the authors report. The data, result tables and causal interpretation have not been independently checked here."
     },
     {
       "id": "E8",
@@ -400,7 +509,13 @@
       "rationale": "当前输入尚不能核验作者对结果的因果解释；这不是对全文识别有效性的结论。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "The supplied text does not allow verification of the authors’ causal interpretation. This is not a judgment about identification in the full paper."
+      "rationale_en": "The supplied text does not allow verification of the authors’ causal interpretation. This is not a judgment about identification in the full paper.",
+      "caption_zh": "限制因果解释",
+      "caption_en": "causal reading needs more checks",
+      "plain_caption_zh": "限制因果解释",
+      "plain_caption_en": "check other possible explanations",
+      "plain_rationale_zh": "还要核对：会不会是其他变化同时推动了数字金融和创新？ 这限制了对后一个论点的理解。",
+      "plain_rationale_en": "Still to check: could other changes explain both digital finance and innovation? This limits how the following claim should be read."
     },
     {
       "id": "E9",
@@ -417,8 +532,19 @@
       "rationale": "读者提出的识别边界，限定如何解释作者报告的结果。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "A reader-imposed identification boundary limits interpretation of the reported results."
+      "rationale_en": "A reader-imposed identification boundary limits interpretation of the reported results.",
+      "caption_zh": "还需要识别依据",
+      "caption_en": "needs further causal justification",
+      "plain_caption_zh": "还需要识别依据",
+      "plain_caption_en": "needs further causal justification",
+      "plain_rationale_zh": "使用这些统计模型，本身不足以证明是数字金融导致了更多创新。 这限制了对后一个论点的理解。",
+      "plain_rationale_en": "Using these statistical models alone does not prove that digital finance caused more innovation. This limits how the following claim should be read."
     }
   ],
-  "revisions": []
+  "revisions": [],
+  "reader_preferences": {
+    "language": "en",
+    "reading_level": "plain",
+    "mode": "core"
+  }
 }

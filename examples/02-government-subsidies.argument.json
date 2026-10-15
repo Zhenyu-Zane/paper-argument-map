@@ -17,7 +17,30 @@
     "reading_title": "政府补贴如何关联企业融资与创新？",
     "reading_title_en": "How do subsidies relate to firm financing and innovation?",
     "input_scope_en": "Abstract and Introduction only; excludes the bodies of Methods, Results and appendices.",
-    "notice_en": "Assistant-assisted reconstruction from the abstract and introduction. Original quotations are preserved. Reported findings and literature positioning have not been independently verified; this is not an expert-labeled benchmark."
+    "notice_en": "Assistant-assisted reconstruction from the abstract and introduction. Original quotations are preserved. Reported findings and literature positioning have not been independently verified; this is not an expert-labeled benchmark.",
+    "plain_reading_title_zh": "政府补贴与企业缺钱、创新有什么关系？",
+    "plain_reading_title_en": "How do subsidies relate to firms’ funding problems and innovation?",
+    "readability_review": {
+      "reviewer": "Assistant self-review; not an independent expert or human comprehension study",
+      "answers": {
+        "why": "Subsidy allocation and its relation to innovation are contested.",
+        "unknown": "Whether helping firms with funding difficulties helps explain subsidy allocation and its association with innovation.",
+        "how": "The study analyzes Chinese listed firms in 2007–2017 using fixed-effects, mediation and moderation tests.",
+        "result": "The authors report that funding difficulties relate negatively to innovation and subsidies weaken this association. Their bailout interpretation forms the contribution claim.",
+        "limits": "Selection into subsidies and reverse causality remain to be checked. No detected targeting evidence in this sample cannot establish that political connections never matter."
+      },
+      "changes": [
+        "Restored prior context and a consequential interpretation boundary to the main view instead of enforcing six nodes.",
+        "Added explanatory captions to every desktop relation; kept source IDs, relation types and source quotations unchanged.",
+        "Rewrote plain-language labels as concrete statements while retaining reported-versus-verified attribution.",
+        "Compared both wording levels and languages; expanded or explained terms where the original professional summary was opaque.",
+        "Included selection/common-cause and reverse-direction questions where relevant; avoided interpreting absent detail as absent evidence in the full paper."
+      ],
+      "unresolved": [
+        "Only abstract and introduction were supplied; methods, results and identification checks have not been independently reviewed.",
+        "Comprehension has not been tested with human readers."
+      ]
+    }
   },
   "passages": [
     {
@@ -82,14 +105,18 @@
       "summary": "补贴究竟扶优、惠及关系企业，还是缓解融资困难？",
       "label_en": "Subsidy allocation and innovation effects are contested: rewarding strong firms, political connections, or easing financing difficulties?",
       "summary_en": "What drives subsidies: performance, connections, or financing needs?",
-      "rationale_en": ""
+      "rationale_en": "",
+      "plain_label_zh": "补贴为何给某些企业：因为它们表现好、有关系，还是缺钱？",
+      "plain_summary_zh": "补贴为何给某些企业：因为它们表现好、有关系，还是缺钱？",
+      "plain_label_en": "Why do some firms receive subsidies: strong performance, political connections, or a shortage of funds?",
+      "plain_summary_en": "Why do some firms receive subsidies: strong performance, political connections, or a shortage of funds?"
     },
     {
       "id": "N2",
       "role": "prior",
       "label": "引言引用一种观点：融资约束可能推动企业通过创新寻求竞争优势。",
       "status": "explicit",
-      "core": false,
+      "core": true,
       "basis": [
         {
           "passage_id": "P3",
@@ -102,7 +129,11 @@
       "summary": "一种既有观点：融资约束可能激发创新",
       "label_en": "The introduction cites the view that financing constraints may motivate firms to innovate for competitive advantage.",
       "summary_en": "One cited view: financing constraints may spur innovation",
-      "rationale_en": ""
+      "rationale_en": "",
+      "plain_label_zh": "引言提到一种观点：资金紧张可能逼企业通过创新寻找出路。",
+      "plain_summary_zh": "引言提到一种观点：资金紧张可能逼企业通过创新寻找出路。",
+      "plain_label_en": "One view cited in the introduction is that a shortage of funds may push firms to innovate.",
+      "plain_summary_en": "One view cited in the introduction is that a shortage of funds may push firms to innovate."
     },
     {
       "id": "N3",
@@ -122,7 +153,11 @@
       "summary": "缓解融资约束的补贴动机受到忽视",
       "label_en": "The authors argue that prior research overlooks easing firms’ financing constraints as a motive for subsidies.",
       "summary_en": "The financing-relief motive has been overlooked",
-      "rationale_en": ""
+      "rationale_en": "",
+      "plain_label_zh": "作者认为，过去研究较少关注政府是否为了帮助缺钱企业而发放补贴。",
+      "plain_summary_zh": "作者认为，过去研究较少关注政府是否为了帮助缺钱企业而发放补贴。",
+      "plain_label_en": "The authors say earlier work pays too little attention to subsidies as help for firms short of funds.",
+      "plain_summary_en": "The authors say earlier work pays too little attention to subsidies as help for firms short of funds."
     },
     {
       "id": "N4",
@@ -142,7 +177,11 @@
       "summary": "补贴如何分配，又如何关联企业创新？",
       "label_en": "How are subsidies allocated, and how do they relate to firm innovation?",
       "summary_en": "How are subsidies allocated, and how do they relate to innovation?",
-      "rationale_en": ""
+      "rationale_en": "",
+      "plain_label_zh": "哪些企业获得补贴？补贴与它们的创新有什么关系？",
+      "plain_summary_zh": "哪些企业获得补贴？补贴与它们的创新有什么关系？",
+      "plain_label_en": "Which firms receive subsidies, and how are subsidies related to their innovation?",
+      "plain_summary_en": "Which firms receive subsidies, and how are subsidies related to their innovation?"
     },
     {
       "id": "N5",
@@ -159,10 +198,14 @@
       "rationale": "",
       "review": "unreviewed",
       "note": "",
-      "summary": "中国上市企业，2007—2017；固定效应、中介与调节检验",
+      "summary": "上市企业，2007—2017 年；固定效应模型、中介路径与调节效应检验。",
       "label_en": "The study uses Chinese listed firms in 2007–2017 for fixed-effects, mediation and moderation tests.",
-      "summary_en": "Chinese listed firms, 2007–2017; fixed-effects, mediation and moderation tests",
-      "rationale_en": ""
+      "summary_en": "Listed firms, 2007–2017; fixed-effects models, mediation (pathway) and moderation (effect differences) tests.",
+      "rationale_en": "",
+      "plain_label_zh": "分析 2007—2017 年中国上市企业，检验资金困难、补贴与创新之间的联系。",
+      "plain_summary_zh": "分析 2007—2017 年中国上市企业，检验资金困难、补贴与创新之间的联系。",
+      "plain_label_en": "Analyze Chinese listed firms in 2007–2017 and test the links between funding difficulties, subsidies and innovation.",
+      "plain_summary_en": "Analyze Chinese listed firms in 2007–2017 and test the links between funding difficulties, subsidies and innovation."
     },
     {
       "id": "N6",
@@ -182,7 +225,11 @@
       "summary": "作者报告：融资约束抑制创新，补贴与缓解抑制相关",
       "label_en": "The authors report that financing constraints suppress innovation and subsidies are associated with easing this suppression.",
       "summary_en": "Subsidies are associated with easing constraints on innovation",
-      "rationale_en": ""
+      "rationale_en": "",
+      "plain_label_zh": "作者报告：资金困难伴随更少创新；获得补贴时，这种负面联系较弱。",
+      "plain_summary_zh": "作者报告：资金困难伴随更少创新；获得补贴时，这种负面联系较弱。",
+      "plain_label_en": "The authors report less innovation among firms facing funding difficulties; this negative link is weaker with subsidies.",
+      "plain_summary_en": "The authors report less innovation among firms facing funding difficulties; this negative link is weaker with subsidies."
     },
     {
       "id": "N7",
@@ -202,7 +249,11 @@
       "summary": "从企业救助与创新解释补贴的目标和效果",
       "label_en": "The claimed contribution is to interpret subsidy objectives and effects through firm bailout and innovation motives.",
       "summary_en": "Explain subsidy objectives and effects through bailout and innovation",
-      "rationale_en": ""
+      "rationale_en": "",
+      "plain_label_zh": "作者用“帮助企业渡过资金困难”来解释补贴为何发放，以及它与创新的关系。",
+      "plain_summary_zh": "作者用“帮助企业渡过资金困难”来解释补贴为何发放，以及它与创新的关系。",
+      "plain_label_en": "The authors use help for firms short of funds to explain subsidy allocation and its link to innovation.",
+      "plain_summary_en": "The authors use help for firms short of funds to explain subsidy allocation and its link to innovation."
     },
     {
       "id": "N8",
@@ -222,7 +273,11 @@
       "summary": "未发现创新能力或政治关系是补贴目标的证据",
       "label_en": "The authors report no evidence in their sample that innovative ability or political connections are targets of subsidies.",
       "summary_en": "No evidence of targeting by innovation or political connections in this sample",
-      "rationale_en": ""
+      "rationale_en": "",
+      "plain_label_zh": "在这个样本中，作者没有发现补贴偏向创新能力强或有政治关系企业的证据。",
+      "plain_summary_zh": "在这个样本中，作者没有发现补贴偏向创新能力强或有政治关系企业的证据。",
+      "plain_label_en": "In this sample, the authors find no evidence that subsidies target innovative or politically connected firms.",
+      "plain_summary_en": "In this sample, the authors find no evidence that subsidies target innovative or politically connected firms."
     },
     {
       "id": "N9",
@@ -242,14 +297,20 @@
       "summary": "未发现证据，不等于任何情况下都没有作用",
       "label_en": "A lack of evidence cannot be read as political connections having no effect in any circumstances.",
       "summary_en": "No detected evidence does not imply no effect everywhere",
-      "rationale_en": "This limits the scope of statistical evidence; it is not a conclusion from independently reanalyzing the data."
+      "rationale_en": "This limits the scope of statistical evidence; it is not a conclusion from independently reanalyzing the data.",
+      "plain_label_zh": "这个样本中没发现政治关系的作用，不代表其他情况下也没有。",
+      "plain_summary_zh": "这个样本中没发现政治关系的作用，不代表其他情况下也没有。",
+      "plain_label_en": "Not finding a role for political connections in this sample does not mean they never matter.",
+      "plain_summary_en": "Not finding a role for political connections in this sample does not mean they never matter.",
+      "plain_rationale_zh": "这是读者对结果能说明什么提出的提醒，不是作者在所引原文中明确给出的结论。这个样本中没发现政治关系的作用，不代表其他情况下也没有。",
+      "plain_rationale_en": "This is a reader’s caution about what the result can establish, not a conclusion explicitly stated in the quoted passage. Not finding a role for political connections in this sample does not mean they never matter."
     },
     {
       "id": "N10",
       "role": "limitation",
       "label": "待核对：分配选择与反向因果如何处理？",
       "status": "not_in_input",
-      "core": false,
+      "core": true,
       "basis": [],
       "rationale": "摘要与引言列出模型和检验，但未充分展开因果识别条件。需要阅读方法及结果部分。",
       "review": "unreviewed",
@@ -257,7 +318,13 @@
       "summary": "待核对：分配选择与反向因果如何处理？",
       "label_en": "To check: how are selection in subsidy allocation and reverse causality handled?",
       "summary_en": "How are allocation selection and reverse causality addressed?",
-      "rationale_en": "The abstract and introduction list models and tests but do not fully explain causal identification. The methods and results need to be examined."
+      "rationale_en": "The abstract and introduction list models and tests but do not fully explain causal identification. The methods and results need to be examined.",
+      "plain_label_zh": "还要核对：企业原本的差异是否同时影响补贴分配和创新？创新表现是否又反过来影响补贴分配？需要继续查阅方法和结果。",
+      "plain_summary_zh": "还要核对：结果来自企业原本的差异，还是创新反过来影响了补贴分配？",
+      "plain_label_en": "Could firms’ existing differences explain who receives subsidies and their innovation? Could innovation itself affect who receives subsidies? These questions require checking beyond the supplied sections.",
+      "plain_summary_en": "Could firms’ existing differences, or innovation affecting subsidy decisions, explain the results?",
+      "plain_rationale_zh": "这里只读了摘要和引言，还需要查看方法、结果或附录。这个问题没有在当前输入中说清楚，不代表整篇论文没有处理。",
+      "plain_rationale_en": "Only the abstract and introduction were read. The methods, results or appendices still need checking. Missing detail here does not mean the full paper ignores the issue."
     }
   ],
   "edges": [
@@ -276,7 +343,13 @@
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source.",
+      "caption_zh": "说明为什么值得研究",
+      "caption_en": "shows why this matters",
+      "plain_caption_zh": "说明为什么值得研究",
+      "plain_caption_en": "shows why this matters",
+      "plain_rationale_zh": "这条线把前面的研究理由或问题，与后面的提问或检验联系起来。它表示为什么开展这项研究，不表示前一个论点已经证明了后一个论点。",
+      "plain_rationale_en": "This connects a reason or question to the next question or test. It explains why the study is undertaken, rather than showing that one claim proves the other."
     },
     {
       "id": "E2",
@@ -293,7 +366,13 @@
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source.",
+      "caption_zh": "明确尚未回答的问题",
+      "caption_en": "defines what is still unknown",
+      "plain_caption_zh": "明确尚未回答的问题",
+      "plain_caption_en": "defines what is still unknown",
+      "plain_rationale_zh": "这条线把前面的研究理由或问题，与后面的提问或检验联系起来。它表示为什么开展这项研究，不表示前一个论点已经证明了后一个论点。",
+      "plain_rationale_en": "This connects a reason or question to the next question or test. It explains why the study is undertaken, rather than showing that one claim proves the other."
     },
     {
       "id": "E3",
@@ -310,7 +389,13 @@
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source.",
+      "caption_zh": "用企业数据检验",
+      "caption_en": "tested using firm data",
+      "plain_caption_zh": "用企业数据检验",
+      "plain_caption_en": "tested using firm data",
+      "plain_rationale_zh": "这条线把前面的研究理由或问题，与后面的提问或检验联系起来。它表示为什么开展这项研究，不表示前一个论点已经证明了后一个论点。",
+      "plain_rationale_en": "This connects a reason or question to the next question or test. It explains why the study is undertaken, rather than showing that one claim proves the other."
     },
     {
       "id": "E4",
@@ -327,7 +412,13 @@
       "rationale": "这是摘要对研究结果的报告。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "This is a report of findings in the abstract."
+      "rationale_en": "This is a report of findings in the abstract.",
+      "caption_zh": "作者报告这一结果",
+      "caption_en": "authors report this pattern",
+      "plain_caption_zh": "作者报告这一结果",
+      "plain_caption_en": "authors report this pattern",
+      "plain_rationale_zh": "这条线表示作者用上述研究设计报告了这一结果。这里尚未独立核对数据、结果表格或因果解释。",
+      "plain_rationale_en": "This connects the study to a result the authors report. The data, result tables and causal interpretation have not been independently checked here."
     },
     {
       "id": "E5",
@@ -344,7 +435,13 @@
       "rationale": "这是引言预告的研究发现，尚未核对相应表格。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "This finding is announced in the introduction; the relevant tables have not been checked."
+      "rationale_en": "This finding is announced in the introduction; the relevant tables have not been checked.",
+      "caption_zh": "作者还报告",
+      "caption_en": "authors also report",
+      "plain_caption_zh": "作者还报告",
+      "plain_caption_en": "authors also report",
+      "plain_rationale_zh": "这条线表示作者用上述研究设计报告了这一结果。这里尚未独立核对数据、结果表格或因果解释。",
+      "plain_rationale_en": "This connects the study to a result the authors report. The data, result tables and causal interpretation have not been independently checked here."
     },
     {
       "id": "E6",
@@ -361,7 +458,13 @@
       "rationale": "根据所引段落重建论证角色之间的联系；这条箭头不是原文的形式化表达。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source."
+      "rationale_en": "This link between argumentative roles is reconstructed from the cited passage; the arrow is not a formal relation stated in the source.",
+      "caption_zh": "据此提出贡献主张",
+      "caption_en": "basis for the claimed contribution",
+      "plain_caption_zh": "据此提出贡献主张",
+      "plain_caption_en": "basis for the claimed contribution",
+      "plain_rationale_zh": "读者据此重建：作者把报告的结果作为贡献主张的依据。这不表示读者已经验证结果或贡献。",
+      "plain_rationale_en": "The reader reconstructs this link: the authors use the reported result as a basis for their contribution claim. Neither the result nor the contribution has been independently verified here."
     },
     {
       "id": "E7",
@@ -378,7 +481,13 @@
       "rationale": "把作者报告的负向结果与引言引用的正向理论预期并置；它们的适用条件仍需核对，不能当作理论被普遍推翻。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "The reported negative result is juxtaposed with a positive theoretical prediction cited in the introduction. Their conditions still need checking; this does not establish a universal refutation."
+      "rationale_en": "The reported negative result is juxtaposed with a positive theoretical prediction cited in the introduction. Their conditions still need checking; this does not establish a universal refutation.",
+      "caption_zh": "与这一观点方向不同",
+      "caption_en": "differs from this prediction",
+      "plain_caption_zh": "与这一观点方向不同",
+      "plain_caption_en": "differs from this prediction",
+      "plain_rationale_zh": "作者报告：资金困难伴随更少创新；获得补贴时，这种负面联系较弱。 两者方向不同，但还需核对适用条件，不能据此宣称原观点被普遍推翻。",
+      "plain_rationale_en": "The authors report less innovation among firms facing funding difficulties; this negative link is weaker with subsidies. The directions differ, but their conditions need checking; this is not a universal refutation."
     },
     {
       "id": "E8",
@@ -395,7 +504,13 @@
       "rationale": "限制从未检出证据到不存在效应的推断。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "Limits the inference from no detected evidence to no effect."
+      "rationale_en": "Limits the inference from no detected evidence to no effect.",
+      "caption_zh": "不要把结果过度推广",
+      "caption_en": "limits how far this extends",
+      "plain_caption_zh": "不要把结果过度推广",
+      "plain_caption_en": "limits how far this extends",
+      "plain_rationale_zh": "这个样本中没发现政治关系的作用，不代表其他情况下也没有。 这限制了对后一个论点的理解。",
+      "plain_rationale_en": "Not finding a role for political connections in this sample does not mean they never matter. This limits how the following claim should be read."
     },
     {
       "id": "E9",
@@ -407,8 +522,19 @@
       "rationale": "因果解释需要输入之外的识别论证，当前示例不作有效性判断。",
       "review": "unreviewed",
       "note": "",
-      "rationale_en": "A causal interpretation requires identification arguments outside the supplied text. This example does not judge their validity."
+      "rationale_en": "A causal interpretation requires identification arguments outside the supplied text. This example does not judge their validity.",
+      "caption_zh": "需要排除其他解释",
+      "caption_en": "other explanations need checking",
+      "plain_caption_zh": "需要排除其他解释",
+      "plain_caption_en": "other explanations need checking",
+      "plain_rationale_zh": "还要核对：获得补贴的企业本来就不同，会不会是这种差异造成了结果？ 这限制了对后一个论点的理解。",
+      "plain_rationale_en": "Still to check: could pre-existing differences between firms receiving and not receiving subsidies explain the results? This limits how the following claim should be read."
     }
   ],
-  "revisions": []
+  "revisions": [],
+  "reader_preferences": {
+    "language": "en",
+    "reading_level": "plain",
+    "mode": "core"
+  }
 }

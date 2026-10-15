@@ -58,3 +58,13 @@ Structural checks: IDs, required fields, types, endpoint validity, quote existen
 - Unsuffixed fields use `analysis.language`. Missing translations fall back to existing text; the reader does not invent translations. Review both languages after an edit. Quotations and source passages remain unchanged.
 - `reader_preferences` optionally stores `language` (`zh` or `en`) and `mode` (`core` or `full`) for export/reopen. It carries no scientific meaning.
 - A core view typically contains 5–7 nodes. Hide secondary context by setting `core: false`; never delete an existing relation or evidence just to simplify the view. Phones stack the same selected nodes in a reading column and preserve actual links, including back-links.
+
+## v0.3 presentation and self-review
+
+The analytical schema remains 0.1. Existing `label`, `summary` and `rationale` (and `_en`/`_zh` variants) supply Technical wording. Optional `plain_label_en/zh`, `plain_summary_en/zh`, `plain_rationale_en/zh` supply Plain wording. Nodes, edges, source spans and statuses remain the same in both levels. Missing plain wording is disclosed in the inspector; the browser does not invent a simplification.
+
+Edges use `caption_en/zh` and `plain_caption_en/zh` for short explanations of each relation. These labels may clarify but must not strengthen the relation. All present wording/caption fields must be strings. The skill generates both languages; `audit` checks their presence.
+
+`reader_preferences.reading_level` is `plain` or `technical`; absent preferences default to English + Plain. Saved exports preserve explicit language, level and core/full view. `analysis.plain_reading_title_en/zh` may provide a simpler page title.
+
+The self-review record is `analysis.readability_review`, with `reviewer` text, `answers` containing nonempty `why`, `unknown`, `how`, `result`, `limits` strings, and `changes` / `unresolved` arrays of text. It records actual review, not a machine-generated claim of correctness. Follow [readability review](readability-review.md). A complete record is not evidence of expert agreement or human comprehension.

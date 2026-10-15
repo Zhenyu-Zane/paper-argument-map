@@ -109,6 +109,26 @@ class ArgumentMapTests(unittest.TestCase):
         self.assertTrue(any('summary_en' in e for e in errors))
         self.assertTrue(any('reader_preferences' in e for e in errors))
 
+    def test_readability_audit_requires_wording_captions_and_review(self):
+        self.assertEqual([], pm.audit_readability(self.data))
+        del self.data['nodes'][0]['plain_summary_en']
+        del self.data['edges'][0]['caption_zh']
+        del self.data['analysis']['readability_review']['answers']['limits']
+        errors = pm.audit_readability(self.data)
+        self.assertTrue(any('plain_summary_en' in e for e in errors))
+        self.assertTrue(any('caption_zh' in e for e in errors))
+        self.assertTrue(any('answers.limits' in e for e in errors))
+
+    def test_plain_fields_are_text_and_level_is_valid(self):
+        self.data['nodes'][0]['plain_label_en'] = ['not text']
+        self.data['reader_preferences']['reading_level'] = 'unrecognized'
+        self.assertGreaterEqual(len(pm.validate(self.data)[0]), 2)
+
+    def test_homepage_metadata_is_escaped_and_portable_default_is_empty(self):
+        self.assertIn('name="argument-home" content=""', pm.render(self.data))
+        rendered = pm.render(self.data, home_url='index.html?x="<script>')
+        self.assertIn('index.html?x=&quot;&lt;script&gt;', rendered)
+
     def test_legacy_data_without_translations_still_renders(self):
         for obj in [self.data['analysis']] + self.data['nodes'] + self.data['edges']:
             for key in list(obj):
